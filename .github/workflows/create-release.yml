@@ -1,0 +1,43 @@
+name: Create Release on Push to Main
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build_pdf:
+    runs-on: ubuntu-latest
+    container: pandoc/latex:latest-ubuntu
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Install dependencies
+        run: | 
+          apt update && \
+          apt install -y zip plantuml && \
+          pip install pandoc-plantuml-filter
+      - name: Build PDFs
+        run: ./build.sh
+      - name: Upload PDF artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: pdf-output
+          path: build.zip
+
+  create_release:
+    needs: build_pdf
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Download PDF artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: pdf-output
+      - name: Create Release
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          gh release create $(date +'%Y-%m-%d %H:%M') --generate-notes './build.zip#All PDFs'

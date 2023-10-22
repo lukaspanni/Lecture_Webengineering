@@ -1,2 +1,4 @@
 *.pdf
 tex2pdf*/
+*.zip
+plantuml-images/

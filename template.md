@@ -7,8 +7,8 @@ theme: "Berlin"
 colortheme: "dove"
 fonttheme: "structurebold"
 fontsize: 12pt
-urlcolor: red
-linkstyle: bold
+urlcolor: olive
+linkstyle: boldslanted
 aspectratio: 169
 lang: de-DE
 section-titles: true
