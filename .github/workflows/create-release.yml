@@ -16,7 +16,7 @@ jobs:
       - name: Install dependencies
         run: | 
           apt update && \
-          apt install -y zip plantuml && \
+          apt install -y zip plantuml librsvg2-bin && \
           pip install pandoc-plantuml-filter
       - name: Build PDFs
         run: ./build.sh
