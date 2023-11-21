@@ -111,7 +111,7 @@ plantuml-format: svg
   - Security: Angriffe, Best-Practices
 
 
-# Einführung: Webanwendungen, HTTP
+# Einführung: Webanwendungen
 
 ## Webanwendungen (1)
 
@@ -128,7 +128,34 @@ plantuml-format: svg
 
 ## Webanwendungen (3)
 
-> Eine **Webanwendung** ist ein Programm, das über einen **Webbrowser** aufgerufen wird und meist teilweise auf einem **Server** ausgeführt wird.
+> Eine **Webanwendung** ist ein Programm, das über einen **Webbrowser** aufgerufen wird und teilweise auf einem **Server** ausgeführt wird.
 
+- Auch nicht unbedingt korrekt 
+  - Progressive Web Apps (PWAs) können auch teilweise offline (ohne Server) ausgeführt werden
+  - z.B. Electron-Anwendungen sind unabhängig von Browser und Server \rightarrow{} integrierte Browser-Engine
+
+## Webanwendungen (4)
+
+> Eine **Webanwendung** ist eine Anwendung, die Web-Technologien (_HTML_, _CSS_, _JavaScript_) verwendet
+
+- Einfache und kurze, aber zyklische Definition
+- HTML + CSS werden teilweise auch außerhalb von Webanwendungen benutzt 
+- JavaScript wird heute praktisch überall benutzt!
+
+
+\rightarrow{} es gibt keine klare Definition! Das ist aber auch garnicht notwendig.
+
+
+
+## Live-Demo: Webanwendungen
+
+- Was passiert beim Abruf einer Webseite? z.B. "lukaspanni.de"
+  - Auflösung des Namens zu einer IP-Adresse über DNS \rightarrow{} 37.120.173.24
+  - HTTP-Anfrage an diese IP-Adresse an Port 80 (Standard für HTTP)
+  - Antwort: 301 Moved Permanently; Location: https://lukaspanni.de/
+  - HTTPS-Anfrage an gleiche IP-Adresse an Port 443 (Standard für HTTPS)
+  - Antwort: 200 OK, HTML-Code, CSS-Code
+
+- Was passiert bei komplexeren Websites?
 
 
