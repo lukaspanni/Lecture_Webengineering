@@ -77,7 +77,7 @@ plantuml-format: svg
 ### Projektarbeit:
 
 - Entwicklung einer (kleinen) Webanwendung mit hier gelernten Technologien
-- Gruppenarbeit möglich (<=4 Studierende)
+- Gruppenarbeit möglich (3 - 5 Studierende)
 - Bewertung mit Vorlesung Projektmanagement (Hr. Merkel)
   - Note Webengineering: 
     - Konzept & Umsetzung der Webanwendungen
@@ -85,6 +85,16 @@ plantuml-format: svg
     - Regelmäßige Vorstellung aktueller Zwischenstände
   - Note Projektmanagement: Projektmanagement, mehr dazu von Hr. Merkel
 
+\rightarrow{} **Aufgabe bis in 2 Wochen (22.01.): Gruppen bilden & Thema überlegen**
+
+## Projektarbeit - mögliche Themen
+
+- TODO-App
+- Zeiterfassung ("Stechuhr")
+- einfaches Spiel (Snake, Pac-Man, ...)
+- Dashboard für Daten von einer APIs (GitHub, deps.dev, ...)
+  - [verschiedene Daten öffentlicher Stellen](https://github.com/bundesAPI) 
+- eigene Ideen
 
 # Vorlesungsinhalt & Lernziele
 
