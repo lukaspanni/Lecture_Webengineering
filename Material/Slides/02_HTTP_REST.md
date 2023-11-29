@@ -156,8 +156,21 @@ Server->Client : 200 OK, ContentType: application/json
 
 
 
-
 ## HTTP Methoden
+
+- Verschiedene Methoden zum Ausdruck der _Semantik_
+### Wichtige Methoden
+
+|   Methode   | Beschreibung                       |
+| ----------- | ---------------------------------- |
+| **GET**     | Ressource abrufen                  |
+| **HEAD**    | Header für Ressource abrufen       |
+| **POST**    | Ressource erstellen                |
+| **PUT**     | Ressource ersetzen                 |
+| **DELETE**  | Resource löschen                   |
+| **OPTIONS** | Liste erlaubter Methoden anfragen  |
+
+
 
 
 ## HTTP Status Codes
