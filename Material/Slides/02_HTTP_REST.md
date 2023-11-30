@@ -249,9 +249,74 @@ Server->Client : 200 OK, ContentType: application/json
 
 ## REST?
 
+**Representational State Transfer**
+
+- Architekturstil des Webs
+- Geht auf Dissertation (2002) von Roy Fielding zurück:
+  - "Architectural Styles and the Design of Network-based Software Architectures"
+  - [Kapitel 5](https://ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm): REST
+
+- Wichtige Kennzeichen
+  - Skalierbare Interaktion
+  - Generische Interfaces
+  - Unabhängigkeit der Komponenten
+  - Lose Kopplung
+
+## REST Prinzipien
+
+### Resources with unique Identifiers 
+Ressourcen und ihre Identifikation
+
+### Links & Hypermedia
+Beziehungen zwischen Ressourcen
+
+### Uniform Interfaces
+Einheitliche Schnittstellen für generische Clients
+
+### Multiple Representations
+Mehrere Repräsentationen / Formate
+
+### Stateless Interactions
+Zustandslosigkeit der _Interaktion_
 
 
+## REST - Ressources with unique Identifiers
 
+- Jede Webanwendung stellt verschiedene Ressourcen bereit
+  - z.B. Produkte, Songs, User, ...
+  - aber auch abstraktere Dinge: Prozesse, Anfragen, ...
 
+- Ressourcen müssen eindeutig identifizierbar sein \rightarrow{} URIs
+  - Uniform Resource Identifiers: ID einer Ressource
+  - Ähnlich wie URL: aber URL verweist auf konkreten Ort ("**L**ocator")
 
+## REST - Links & Hypermedia
 
+- Beziehungen zwischen Ressourcen werden über (Hyper)Links ausgedrückt
+- Server kann Folgeaktionen über Links ausdrücken
+  - Damit einen Zustandsübergang ermöglichen
+  - \rightarrow{} "HATEOAS: Hypertext as the engine of application state"
+
+## REST - Uniform Interfaces
+
+- Wichtig für Skalierbarkeit
+- Ein einheitlicher Client kann alle Ressourcen nutzen 
+- \rightarrow{} **HTTP**
+  - Klare Semantik der Methoden
+  - Klare Semantik der Status-Codes
+
+## REST - Multiple Representations
+
+- Verschiedene Arten von Clients benötigen verschiedene Formate
+- \rightarrow{} **HTTP Content-Negotiation**
+  - Menschenlesbare und maschinenlesbare Repräsentationen der gleichen Ressource
+  - Verschiedene Sprachen
+
+## REST - Stateless Interactions 
+
+- Nicht zu verwechseln mit **zustandslosen Anwendungen**!
+  - Nur die _Interaktion_ (Request-Response) ist zustandslos
+- Zustand muss irgendwie anders verwaltet werden
+  - Als Ressource
+  - Auf dem Server
+  - Im Client
