@@ -1,6 +1,6 @@
 ---
 title: "Vorlesung Webengineering I - HTTP & REST"
-topic: "Webengineering_1_1"
+topic: "Webengineering_1_2"
 date: 2024-01-15
 author: "Lukas Panni"
 theme: "Berlin"
