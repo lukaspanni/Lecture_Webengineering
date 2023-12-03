@@ -17,7 +17,7 @@ numbersections: true
 plantuml-format: svg
 ...
 
-# HTTP
+# HTTP Grundlagen
 
 ## Hypertext Transfer Protocol (HTTP) - Grundlage des Web
 
@@ -55,6 +55,8 @@ plantuml-format: svg
 ![](media/HTTP3.png){height=65%}
 
 _https://de.wikipedia.org/wiki/Hypertext_Transfer_Protocol#/media/Datei:HTTP-2_vs._HTTP-3_Protocol_Stack.svg_
+
+# HTTP Request - Response
 
 ## HTTP Request - Response
 
@@ -320,3 +322,9 @@ Zustandslosigkeit der _Interaktion_
   - Als Ressource
   - Auf dem Server
   - Im Client
+
+
+## REST - Realisierung Zustand
+
+
+## REST - Skalierbarkeit
