@@ -16,7 +16,7 @@ foreach ($arg in $files) {
 
   $jobs += Start-Job -ScriptBlock { 
     param($arg, $pdfName)
-    $pdfType = $file.Directory.Name
+    $pdfType = (Get-ChildItem $arg).Directory.Name
     if ($pdfType -eq "Slides") {
       pandoc -f markdown+smart+yaml_metadata_block+rebase_relative_paths --toc --slide-level 2 --number-section --pdf-engine lualatex -t beamer -H preamble.tex -F pandoc-plantuml -o $pdfName $arg
     
