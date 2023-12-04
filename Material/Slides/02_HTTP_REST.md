@@ -326,5 +326,32 @@ Zustandslosigkeit der _Interaktion_
 
 ## REST - Realisierung Zustand
 
+### Zustand im Client 
+
+- Client für Verwaltung des Zustands verantwortlich
+- Kein Aufwand für Server 
+- Keine volle Kontrolle über Client \rightarrow{} kann Zustand manipulieren
+
+### Zustand im Server (in der Applikation)
+
+- Server muss Zustand einem Client zuordnen können
+- Wenn die Applikation ausfällt ist auch der Zustand verloren \rightarrow{} Verteilung auf mehrere Server schwer
+
+
+## REST - Realisierung Zustand
+
+#### Zustand als Ressource
+
+- Zustand (z.B. Einkaufswagen im Online-Shop) wird als Ressource dargestellt
+- Ressourcen können über mehrere Server verteilt werden \rightarrow{} horizontale Skalierung
+- Ausfall der Applikation / des Servers leichter kompensierbar
+
 
 ## REST - Skalierbarkeit
+
+![](./media/Load_Balancing_1.png){height=90%}
+
+## REST - Skalierbarkeit
+
+![](./media/Load_Balancing_2.png){height=90%}
+
