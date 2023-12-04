@@ -69,7 +69,7 @@ plantuml-format: svg
 
 \rightarrow{}  alles auf GitHub [(lukaspanni/Lecture_Webengineering_2024)](https://github.com/lukaspanni/Lecture_Webengineering_2024)
 
-\rightarrow{}  separate Repos für Code 
+\rightarrow{}  separates Repo für Code [(TINF23B5-Webengineering/Lecture_Code)](https://github.com/TINF23B5-Webengineering/Lecture_Code) 
 
 
 ## Prüfungsleistung
@@ -85,7 +85,7 @@ plantuml-format: svg
     - Regelmäßige Vorstellung aktueller Zwischenstände
   - Note Projektmanagement: Projektmanagement, mehr dazu von Hr. Merkel
 
-\rightarrow{} **Aufgabe bis in 2 Wochen (22.01.): Gruppen bilden & Thema überlegen**
+\rightarrow{} **Aufgabe bis in 2 Wochen (22.01.): Gruppen bilden & Thema überlegen** + kurze Präsentation (~3 min) 
 
 ## Projektarbeit - mögliche Themen
 

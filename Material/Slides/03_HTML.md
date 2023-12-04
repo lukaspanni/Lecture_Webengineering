@@ -68,7 +68,8 @@ plantuml-format: svg
 - Key-Value Paare
 - Angabe im öffnenden Tag
 - `<ELEMENT ATTRIBUT="VALUE"> ... </ELEMENT>`
-- Verschiedene Standard-Attribute + Tag-spezifische Attribute
+- Nutzbarkeit abhängig vom Tag
+
 
 ## HTML Head
 
@@ -174,3 +175,20 @@ plantuml-format: svg
 
 
 
+## HTML Globale Attribute
+
+- Recap: Tags können mit Attributen (Key-Value Paare) angereichert werden
+- Attribute abhängig vom Tag
+  - Einige global verfügbar: [Universalattribute](https://wiki.selfhtml.org/wiki/HTML/Attribute#Universalattribute) 
+- Wichtige Universalattribute
+  - `id` - eindeutiger Identifier für Element (z.B. Zugriff über `#ID` in URL)
+  - `class` - Klasse von gleichartigen Elementen, Liste von Klassen (Leerzeichengetrennt)
+  - `hidden` - Elemente verstecken
+  - `style` - Inline CSS-Style
+
+
+## HTML Elemente: Auswahl semantischer Elemente
+
+- Bereits behandelt: `<em>` / `<strong>`
+- Weitere Elemente mit vorwiegend **semantischer Bedeutung**
+  -  
