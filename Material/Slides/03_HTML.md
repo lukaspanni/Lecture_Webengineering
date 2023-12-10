@@ -214,16 +214,6 @@ plantuml-format: svg
   - `style` - Inline CSS-Style
 
 
-## Praxisübung HTML-Seite
-
-- **Aufgabe**: Eine Nachrichten-Seite mit bekannten Mitteln erstellen
-  - Eine Übersichtsseite (Liste von Artikeln mit Links auf Artikel)
-  - Einen Artikel als Unterseite
-
-
-
-# Fortgeschrittene HTML Elemente
-
 ## HTML Elemente: Tabellen
 
 - Tabelle (`<table>`) besteht aus "Unter-Elementen"
@@ -335,4 +325,45 @@ plantuml-format: svg
 ## HTML Elemente: Tabellen - Colspan/Rowspan 
 
 ![](./media/HTML_table_span_rowspan.png){height=90%}
+
+## HTML Elemente: Bilder
+
+- `<img src="..." />`: Bild (img = image)
+- `src`-Attribut (src = source) ist eine URL zu einer Bilddatei
+  - Browser muss URL abrufen können, URL darf auf andere Webseite verweisen
+  - `crossorigin`-Attribut zur Steuerung, inwiefern eventuell benötigte Anmeldedaten mit dem Request gesendet werden
+  - \rightarrow{} mehr dazu in einer weiteren Vorlesung, Stichwort: CORS
+- Attribute `width` und `heigth` zur Angabe von Breite / Höhe 
+
+## HTML Sonderzeichen
+
+- Insbesondere in HTML genutzte Zeichen (`<`, `>`, ...) müssen codiert werden
+- HTML-Entitäten: `&#CODE;` oder `&NAME;`
+  - `&lt;` / `&#60;` = `<`
+  - `&gt;` / `&#62;` = `>`
+  - ... \rightarrow{} [MDN](https://developer.mozilla.org/en-US/docs/Glossary/Entity)
+
+
+## URL Sonderzeichen
+
+- URLs dürfen nur bestimmte Zeichen enthalten
+  - z.B. haben `/`, `#`, `?` eine definierte Funktion
+  - Auch andere Sonderzeichen sind nicht erlaubt
+- Codierung von Sonderzeichen Byteweise in Hexadezimaler Schreibweise: 
+  - `%20`= Leerzeichen, ASCII 0x20 = 32
+  - `%2F` = `/`, ASCII 0x2F = 47
+  - Nicht-ASCII Sonderzeichen (z.B. UTF-8): `%E2%82%AC` = `€`
+  - Alternativ mit vorgestelltem u und UTF-16-Zahl: `%u20AC` = `€`
+
+## Ressourcen
+
+- [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [W3Schools](https://www.w3schools.com/html/default.asp)
+- [SelfHTML](https://wiki.selfhtml.org/wiki/HTML/Tutorials/Einstieg)
+
+## Praxisübung HTML-Seite
+
+- **Aufgabe**: Eine Nachrichten-Seite mit bekannten Mitteln erstellen
+  - Eine Übersichtsseite (Liste von Artikeln mit Links auf Artikel)
+  - Einen Artikel als Unterseite
 
