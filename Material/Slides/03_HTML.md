@@ -131,6 +131,16 @@ plantuml-format: svg
 
 ![](./media/HTML_paragraph_default.png){height=70%}
 
+## HTML Elemente: Hyperlinks
+
+- `<a href="https://lukaspanni.de">...</a>` (a = anchor)
+- Inline-Element, Standarddarstellung: blau und unterstrichen
+- `href`-Attribut zur Angabe der Ziel-URL
+  - relative URLs möglich:
+    - `./` gleiches Pfadsegment (auf Seite abc.de/xyz/1.html führt der Link `./2.html` zu **abc.de/xyz/2.html**)
+    - `../` Eltern-Segment (gleiches Beispiel, Link `../2.html` führt zu **abc.de/2.html**)
+- Inhalt des Tags als angezeigter Link
+
 
 ## HTML Elemente: Zeilenumbruch + Trennlinie
 
@@ -175,6 +185,23 @@ plantuml-format: svg
 
 
 
+## HTML Elemente: Auswahl semantischer Elemente
+
+- Bereits behandelt: `<em>` / `<strong>`
+- Weitere Elemente mit vorwiegend **semantischer Bedeutung**
+  - `<article>`: in sich geschlossener Artikel (unabhängig von anderem Inhalt der Seite)  
+  - `<section>`: Abschnitt einer Seite, wenn kein besser geeignetes semantisches Element existiert
+  - `<header>`: Abschnitt mit einleitendem Inhalt
+  - `<footer>`: Fußzeile, z.B. mit Angabe von Autor, Copyright etc.
+
+## HTML Elemente: Listen
+
+- `<ul>`: Unsortierte Liste (ul = unordered list)
+  - Standarddarstellung: Aufzählungspunkte
+- `<ol>`: Sortierte Liste (ol = ordered list)
+  - Standarddarstellung: Nummeriert mit arabischen Ziffern 
+- `<li>`: Listenelement (li = list item)
+
 ## HTML Globale Attribute
 
 - Recap: Tags können mit Attributen (Key-Value Paare) angereichert werden
@@ -187,8 +214,125 @@ plantuml-format: svg
   - `style` - Inline CSS-Style
 
 
-## HTML Elemente: Auswahl semantischer Elemente
+## Praxisübung HTML-Seite
 
-- Bereits behandelt: `<em>` / `<strong>`
-- Weitere Elemente mit vorwiegend **semantischer Bedeutung**
-  -  
+- **Aufgabe**: Eine Nachrichten-Seite mit bekannten Mitteln erstellen
+  - Eine Übersichtsseite (Liste von Artikeln mit Links auf Artikel)
+  - Einen Artikel als Unterseite
+
+
+
+# Fortgeschrittene HTML Elemente
+
+## HTML Elemente: Tabellen
+
+- Tabelle (`<table>`) besteht aus "Unter-Elementen"
+  - `<tr>`: Zeile (tr = table row)
+  - `<td>`: Zelle (tr = table data)
+  - `<th>`: Kopfzeile (th = table header)
+
+## HTML Elemente: Tabellen
+```html
+<table>
+  <tr>
+    <th></th>
+    <th>Spalte 1 Überschrift</th>
+    <th>Spalte 2 Überschrift</th>
+  </tr>
+  <tr>
+    <th>Zeile 1 Überschrift</th>
+    <td>Zeile 1 Inhalt 1</td>
+    <td>Zeile 1 Inhalt 2</td>
+  </tr>
+  ...
+</table>
+
+```
+## HTML Elemente: Tabellen
+
+![](./media/HTML_simple_table.png)
+
+
+## HTML Elemente: Tabellen - Border
+
+- Attribut `border` steuert die Umrandung
+  - Standardwert: 0 \rightarrow{} kein Rand
+  - Wert x > 0:  Rand mit x Pixeln
+
+![](./media/HTML_table_border.png){width=70%}
+
+## HTML Elemente: Tabellen - Col/Rowspan
+
+- Attribut `colspan` für Zusammenfassung mehrerer _Spalten_
+- Attribut `rowspan` für Zusammenfassung mehrerer _Zeilen_
+
+## HTML Elemente: Tabellen - Colspan/Rowspan 
+
+```html
+<table border="1">
+  <tr>
+    <td>1-1</td><td>1-2</td><td>1-3</td><td>1-4</td>
+  </tr>
+  <tr>
+    <td>2-1</td><td>2-2</td><td>2-3</td><td>2-4</td>
+  </tr>
+  <tr>
+    <td>3-1</td><td>3-2</td><td>3-3</td><td>3-4</td>
+  </tr>
+  <tr>
+    <td>4-1</td><td>4-2</td><td>4-3</td><td>4-4</td>
+  </tr>
+</table>
+```
+
+
+## HTML Elemente: Tabellen - Colspan/Rowspan 
+
+![](./media/HTML_table_span_nospan.png){height=90%}
+
+## HTML Elemente: Tabellen - Colspan/Rowspan
+
+```html
+<table border="1">
+  <tr>
+    <td>1-1</td><td>1-2</td><td>1-3</td><td>1-4</td>
+  </tr>
+  <tr>
+    <td colspan="4">2-1 - 2-4</td>
+  </tr>
+  <tr>
+    <td>3-1</td><td>3-2</td><td>3-3</td><td>3-4</td>
+  </tr>
+  <tr>
+    <td colspan="2">4-1 - 4-2</td><td>4-3</td><td>4-4</td>
+  </tr>
+</table>
+```
+
+## HTML Elemente: Tabellen - Colspan/Rowspan 
+
+![](./media/HTML_table_span_colspan.png){height=90%}
+
+## HTML Elemente: Tabellen - Colspan/Rowspan 
+
+```html
+<table border="1">
+  <tr>
+    <td>1-1</td><td rowspan="2">1-2 - 2-2</td><td>1-3</td><td>1-4</td>
+  </tr>
+  <tr>
+    <td>2-1</td><td>2-3</td><td rowspan="3">2-4</td>
+  </tr>
+  <tr>
+    <td>3-1</td><td>3-2</td><td>3-3</td>
+  </tr>
+  <tr>
+    <td>4-1</td><td>4-2</td><td>4-3</td>
+  </tr>
+</table>
+```
+
+## HTML Elemente: Tabellen - Colspan/Rowspan 
+
+![](./media/HTML_table_span_rowspan.png){height=90%}
+
