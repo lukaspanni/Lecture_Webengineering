@@ -22,7 +22,7 @@ Die Abgabe erfolgt am Ende des zweiten Theoriesemesters (Juli/August).
 Ein genauer Termin wird noch bekanntgegeben (mindestens 3 Wochen im Voraus).
 
 Das Projekt ist jedoch über beide Semester zu bearbeiten, nicht erst kurz vor Abgabe.
-Wer frühzeitig beginnt kann sich regelmäßig Feedback einholen.
+Wer frühzeitig beginnt kann sich regelmäßig Feedback einholen!
 
 ## Abzugebende Artefakte
 
@@ -30,6 +30,12 @@ Die Bewertung im Fach Webengineering bezieht sich nur auf die technischen Aspekt
 Dazu ist das **vollständige Git-Repository** abzugeben.
 Die Abgabe erfolgt entweder als Zip/Tar per Mail oder per Freischaltung des Accounts `lukaspanni` für das Repository auf GitHub (Leserechte reichen aus).
 Bei Abgabe per GitHub bitte trotzdem eine kurze Mail zur Erinnerung.
+Für die Bewertung brauche ich nur eure Matrikelnummern.
+Ihr müsst eure Klarnamen nicht über Usernamen auf GitHub oder Namen + E-Mail Adressen der Committer in der Git-History preisgeben.
+Solange ich nachvollziehen kann, welche Matrikelnummer zu welchem Commit und welchem Code gehört bin ich zufrieden.
+
+Hinweis: ihr könnt bei Commits gerne mehrere Autoren angeben (siehe [Doku](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/creating-a-commit-with-multiple-authors)), solange noch genügend Code/Commits einer einzigen Person zugeordnet werden kann. 
+
 
 Das Repository muss enthalten:
 

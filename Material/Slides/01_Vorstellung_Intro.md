@@ -91,6 +91,7 @@ plantuml-format: svg
 
 - TODO-App
 - Zeiterfassung ("Stechuhr")
+- Karteikarten-Anwendung ("Anki")
 - einfaches Spiel (Snake, Pac-Man, ...)
 - Dashboard für Daten von einer APIs (GitHub, deps.dev, ...)
   - [verschiedene Daten öffentlicher Stellen](https://github.com/bundesAPI) 
