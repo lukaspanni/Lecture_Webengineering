@@ -9,17 +9,13 @@ on:
 jobs:
   build_pdf:
     runs-on: ubuntu-latest
-    container: pandoc/latex:latest-ubuntu
+    container: ghcr.io/lukaspanni/pandoc-builder:latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      - name: Install dependencies
-        run: | 
-          apt update && \
-          apt install -y zip plantuml librsvg2-bin python3-pip && \
-          pip install pandoc-plantuml-filter
       - name: Build PDFs
-        run: ./build.sh
+        shell: pwsh
+        run: ./build.ps1
       - name: Upload PDF artifacts
         uses: actions/upload-artifact@v3
         with:
@@ -41,4 +37,4 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           ls -R
-          gh release create $(date +'%Y-%m-%d-%H-%M') build.zip --generate-notes 
+          gh release create $(date +'%Y-%m-%d-%H-%M') build.zip --generate-notes

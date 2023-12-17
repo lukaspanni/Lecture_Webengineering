@@ -363,7 +363,8 @@ plantuml-format: svg
 
 ## Praxisübung HTML-Seite
 
-- **Aufgabe**: Eine Nachrichten-Seite mit bekannten Mitteln erstellen
+### Aufgabe: Eine Nachrichten-Seite mit bekannten Mitteln erstellen
   - Eine Übersichtsseite (Liste von Artikeln mit Links auf Artikel)
   - Einen Artikel als Unterseite
 
+_Hinweis_: ihr könnt den Lorem Ipsum Generator zur Erstellung von Beispieltext nutzen: [loremipsum.de](https://loremipsum.de/)
