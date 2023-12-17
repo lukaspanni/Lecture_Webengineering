@@ -116,7 +116,6 @@ Noch weitere, siehe [MDN/input#input_types](https://developer.mozilla.org/en-US/
 ## Eingabefelder - Typen
 
 ![](./media/HTML_inputs.png)
-![](./HTML_inputs_color.png)
 
 ## Eingabefelder - wichtige Attribute
 
@@ -149,7 +148,7 @@ Noch weitere, siehe [MDN/input#input_types](https://developer.mozilla.org/en-US/
 
 ## Einagabefelder - Auswahlliste
 
-![](./material/HTML_input_select.png)
+![](./media/HTML_input_select.png)
 
 `value`-Attribut der gewählten Option wird als Wert für das Feld mit dem `name`-Attribut des `select`-Elements übertragen
 
