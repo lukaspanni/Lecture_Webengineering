@@ -19,7 +19,7 @@ plantuml-format: svg
 
 # CSS - Grundlagen 
 
-## CSS - Grundlagen
+## Grundlagen
 
 **C**ascading **S**tyle **S**heets
 
@@ -30,7 +30,7 @@ plantuml-format: svg
   - Überschreibung von Regeln
 - Stylesheets werden vom Browser interpretiert und ergeben mit HTML das Layout der Webseite
 
-## CSS - Syntax
+## Syntax
 
 - Deklaration: Paar aus Eigenschaft (Property) und Wert (Value)
   - `color: red;`
@@ -45,7 +45,7 @@ plantuml-format: svg
 - Selektor: Element, auf das sich eine Deklaration / ein Deklarationsblock bezieht
 - Kombination aus Selektor und Deklarationsblock: _Ruleset_
 
-## CSS Selektoren
+## Selektoren
 
 - Universal-Selektor `*` \rightarrow{} alle Elemente
 - Elementname `p` \rightarrow{} alle `<p>`-Elemente
@@ -55,7 +55,7 @@ plantuml-format: svg
 - ID `#id` \rightarrow{} alle Elemente, bei denen das `id`-Attribut den Wert `id` hat
   - IDs sollten eindeutig pro HTML-Dokument sein
 
-## CSS Selektoren 
+## Selektoren 
 
 - Attribute `[attr]` \rightarrow{} alle Elemente, bei denen das Attribut `attr` existiert
 - Attribut mit Wert `[attr="value"]` \rightarrow{} alle Elemente, bei denen das Attribut `attr` exakt den Wert `value` hat
@@ -65,7 +65,7 @@ plantuml-format: svg
 
 siehe auch [selfhtml.org](https://wiki.selfhtml.org/wiki/CSS/Tutorials/Selektoren/einfacher_Selektor#Attributselektor)
 
-## CSS Eigenschaften
+## Eigenschaften
 
 - Komplette Liste: [CSS Properties](https://www.w3schools.com/cssref/index.php)
 - Wichtige Eigenschaften
@@ -77,7 +77,7 @@ siehe auch [selfhtml.org](https://wiki.selfhtml.org/wiki/CSS/Tutorials/Selektore
   - `padding`: Abstand vom Rand des Elements zum Inhalt (`top right bottom left`)
   - `border`: Rahmen um das Element (`width style color`, Als Ersatz für `border-...`)
 
-## CSS Vererbung
+## Vererbung
 
 - Rulesets werden vom Selektor auf Kind-Elemente vererbt:
   ```css
@@ -90,7 +90,7 @@ siehe auch [selfhtml.org](https://wiki.selfhtml.org/wiki/CSS/Tutorials/Selektore
 
 # CSS nutzen
 
-## CSS: Einbindung in HTML
+## Einbindung in HTML
 
 - Inline-Style: Angabe im `style`-Attribut
   ```html
@@ -128,13 +128,13 @@ Passt die in 03_HTML erstellte Nachrichtenseite mit CSS an:
   - `AB` \rightarrow{} Alle Elemente, die mit `A` **und** mit `B` selektiert werden
   - `A B` \rightarrow{} Alle Elemente, die mit `B` selektiert werden und ein **transitives** Kind (auch Nachfahre genannt) von `A` sind
   - `A > B` \rightarrow{} Alle Elemente, die mit `B` selektiert werden und ein **direktes** Kind von `A` sind
-  - `A + B` \rightarrow{} Alle Elemente, die mit `B` selektiert werden und **direkt** nach `A` stehen (Nachbarelemente)
-  - `A ~ B` \rightarrow{} Alle Elemente, die mit `B` selektiert werden und nach `A`
+  - `A + B` \rightarrow{} Alle Elemente, die mit `B` selektiert werden und **direkt** nach `A` stehen (direkte Nachbarelemente)
+  - `A ~ B` \rightarrow{} Alle Elemente, die mit `B` selektiert werden und nach `A` stehen
 
 siehe auch [selfhtml.org](https://wiki.selfhtml.org/wiki/CSS/Tutorials/Selektoren/Kombinator)
 
 
-## CSS Pseudoklassen
+## Pseudoklassen
 
 - Klassen, die nicht im HTML-Code angegeben werden, sondern vom Browser gesetzt werden
   - Werden direkt an Selektor angehängt (z.B. `p:hover`)
@@ -143,7 +143,7 @@ siehe auch [selfhtml.org](https://wiki.selfhtml.org/wiki/CSS/Tutorials/Selektore
   - `:active` \rightarrow{} Element wird aktuell angeklickt
   - `:focus` \rightarrow{} Element hat aktuell den Fokus (z.B. durch Tabulator-Taste oder Mausklick)
 
-## CSS Struktur-Pseudoklassen
+## Struktur-Pseudoklassen
 - Beziehen sich auf die Struktur des HTML-Dokuments
   - `:first-child` \rightarrow{} Element ist das erste Kind seines Elternelements
   - `:last-child` \rightarrow{} Element ist das letzte Kind seines Elternelements
@@ -152,12 +152,153 @@ siehe auch [selfhtml.org](https://wiki.selfhtml.org/wiki/CSS/Tutorials/Selektore
   - Analog für den Typ des Elements: `:first-of-type`, `:last-of-type`, `:nth-of-type(n)`
 
 
-## TODO:
-- CSS Maßeinheiten 
-- CSS Box-Modell
-- CSS Flexbox
+## Maßeinheiten
+
+- Absolute Maßeinheiten
+  - `px` \rightarrow{} Pixel
+  - `cm` \rightarrow{} Zentimeter
+  - `mm` \rightarrow{} Millimeter
+- Relative Maßeinheiten
+  - `em` \rightarrow{} ungefähre Breite des Buchstaben `M`, abhängig von Schriftart und Größenfestlegung des Elternelements
+  - `rem` \rightarrow{} wie `em`, aber nicht vom Elternelement abhängig, sondern vom Root-Element
+  - `vw` \rightarrow{} prozentualer Anteil der Breite des Viewports
+  - `vh` \rightarrow{} prozentualer Anteil der Höhe des Viewports
+
+## CSS Maßeinheiten
+
+- Relative Maßeinheiten sind zu bevorzugen
+  - Skalieren mit der Schriftgröße
+  - Skalieren mit der Bildschirmgröße \rightarrow{} responsives Design, mobile Webseiten
 
 
+## CSS Box-Modell
+
+- CSS betrachtet alle HTML-Elemente als rechteckige Boxen
+- Der Inhalt (Content) wird jeweils umschlossen von: 
+  - Padding: Abstand zum Rand
+  - Border: Rahmen um das Element
+  - Margin: Abstand zum Nachbarelement
+- Die Gesamtgröße bei der Darstellung eines Elements ergibt sich aus der Summe von Inhalt, Padding, Border und Margin
+
+## CSS Box-Modell
+
+\centering
+![](https://upload.wikimedia.org/wikipedia/commons/7/7a/Boxmodell-detail.png)
+
+## CSS Box-Modell
+
+- CSS-Eigenschaften
+  - `width` / `height`: Breite / Höhe des **Inhalts**
+  - `padding-top` / `padding-right` / `padding-bottom` / `padding-left`
+    - Kurzschreibweise: `padding: 10px 20px 30px 40px;` \rightarrow{} `top right bottom left`
+  - Analog für `margin`
+  - `border`: Rahmen um das Element
+    - Kurzschreibweise: `border: 1px solid black;` \rightarrow{} `width style color`
+
+## CSS Box-Modell Größe
+
+- `width` und `height` beziehen sich nicht auf die Gesamtgröße
+  - Bei `width: 100px;` \rightarrow{} Gesamtgröße = 100px + Padding + Border + Margin
+  - Kann zu unerwarteten Ergebnissen führen
+- `overflow` Eigenschaft steuert das Verhalten, wenn der Inhalt "zu groß" ist
+  - `auto`: Browser entscheidet
+  - `hidden`: Inhalt wird abgeschnitten
+  - `scroll`: Scrollbalken wird angezeigt
+  - `visible`: Inhalt wird über den Rand hinaus angezeigt
+
+
+## CSS Box-Modell Rahmen
+
+- Kurzschreibweise `width style color` wie oben beschrieben
+  - `style`: Darstellung des Rahmens (`solid`, `dotted`, `dashed`, `double`, ...)
+- `border-radius`: Ecken abrunden
+  - `border-radius: 10px;` \rightarrow{} Alle Ecken werden mit einem Radius von 10px abgerundet
+  - `border-radius: 10px 20px 30px 40px;` \rightarrow{} `top-left top-right bottom-right bottom-left`
+- `border-collapse`: benachbarte Rahmen zusammenfassen, Werte `collapse` und `separate`
+
+
+## Positionierung - `position`
+
+- Verschiedene Möglichkeiten Elemente zu positionieren
+- Einfache Positionierung mit `position` Eigenschaft
+  - `absolute`: Position bezogen auf Rand des nächsten Elternelements bei dem `position` nicht `static` ist
+  - `relative`: Position relativ zur Anfangsposition (relative Verschiebung)
+  - `fixed`: Position bezogen auf den Viewport
+
+## Positionierung - `z-index`
+
+- "Dreidimensionale" Positionierung
+- `z-index` gibt die relative "Tiefe" eines Elements an
+  - Elemente mit höherem `z-index` werden über Elementen mit niedrigerem `z-index` dargestellt
+  - `z-index` kann auch negativ sein
+
+## Positionierung - Flexbox
+
+- Layout-Modell, das Elemente in Zeilen/Spalten anordnet
+- Elemente können sich dynamisch anpassen 
+  - Wachsen (flex) bei verfügbarem Platz
+  - Schrumpfen (shrink) bei zu wenig Platz
+- Macht responsive Layouts deutlich einfacher
+
+## Positionierung - Flexbox Grundbegriffe
+
+\centering
+![](https://css-tricks.com/wp-content/uploads/2018/11/00-basic-terminology.svg)
+
+
+## Positionierung - Flexbox Containr
+
+- Wird die CSS-Eigenschaft `display` auf `flex` gesetzt, wird das Element zum **Flex-Container** und alle  Kind-Elemente zu **Flex-Items**
+- Flex-Container selbst verhält sich gegenüber anderen Elementen wie ein Block-Element
+  - `inline-flex`, damit der Container sich wie ein Inline-Element verhält
+
+## Positionierung - Flexbox Container
+
+- Eigenschaften für den Container
+  - `flex-direction`: Anordnung der Elemente (Festlegung der Hauptachse) \rightarrow{} `row` / `column`, oder jeweils `-reverse`
+  - `flex-wrap`: Verhalten bei zu wenig Platz \rightarrow{} `nowrap`, `wrap`
+  - `justify-content`: Ausrichtung der Elemente auf der Hauptachse \rightarrow{} `flex-start`, `flex-end`, `center`, `space-between`, `space-around`
+
+## Positionierung - Flexbox Container `justify-content`
+
+\centering
+![](https://css-tricks.com/wp-content/uploads/2018/10/justify-content.svg){height=90%}
+
+
+## Positionierung - Flexbox Container
+
+- Eigenschaften für den Container
+  - `align-items`: Ausrichtung der Elemente auf der Querachse \rightarrow{} `flex-start`, `flex-end`, `center`, `baseline`, `stretch`
+
+## Positionierung - Flexbox Container `align-items`
+
+\centering
+![](https://css-tricks.com/wp-content/uploads/2018/10/align-items.svg){height=85%}
+
+
+## Positionierung - Flexbox Items
+
+- Eigenschaften für die Items:
+  - `order`: Reihenfolge der Elemente überschreiben
+  - `flex-grow`: Erlaubt Element zu wachsen, wenn Platz vorhanden ist
+    - Alle Elemente mit gleicher `flex-grow`-Eigenschaft wachsen gleichmäßig
+    - Alle Elemente `flex-grow: 1` \rightarrow{} Verfügbarer Platz wird gleichmäßig aufgeteilt
+  - `flex-shrink`: Wie `flex-grow`, aber fürs Schrumpfen
+
+![](https://css-tricks.com/wp-content/uploads/2018/10/flex-grow.svg){height=50%}
+
+## Positionierung - Flexbox Items
+
+- Eigenschaften für die Items:
+  - `flex-basis`: Breite des Elements, bevor zusätzlicher Platz verteilt wird
+  - `flex`: Kurzschreibweise für `flex-grow`, `flex-shrink` und `flex-basis`, (setzt nur `flex-basis` wenn nur ein Wert mit Maßeinheit angegeben wird!)
+    - **Kurzschreibweise wird empfohlen!**
+  - `align-self`: Überschreibt Standard-Alignment (von `align-items`) für einzelnes Element
+
+## Positionierung - Flexbox weitere Infos
+
+- [CSS-Tricks: A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+- [MDN: Flexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
 
 ## Praxisaufgabe 2
 
