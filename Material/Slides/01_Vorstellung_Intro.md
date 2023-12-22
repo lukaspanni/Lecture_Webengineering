@@ -67,9 +67,9 @@ plantuml-format: svg
 - Sonstiges (Anleitungen, Zusatzmaterial) \rightarrow{} Extra
 
 
-\rightarrow{}  alles auf GitHub [(lukaspanni/Lecture_Webengineering_2024)](https://github.com/lukaspanni/Lecture_Webengineering_2024)
+\rightarrow{} alles auf GitHub [(lukaspanni/Lecture_Webengineering_2024)](https://github.com/lukaspanni/Lecture_Webengineering_2024)
 
-\rightarrow{}  separates Repo für Code [(TINF23B5-Webengineering/Lecture_Code)](https://github.com/TINF23B5-Webengineering/Lecture_Code) 
+\rightarrow{} separates Repo für Code [(TINF23B5-Webengineering/Lecture_Code)](https://github.com/TINF23B5-Webengineering/Lecture_Code) 
 
 
 ## Prüfungsleistung

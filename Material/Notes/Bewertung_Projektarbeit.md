@@ -1,5 +1,6 @@
 ---
 title: Bewertung Projektarbeit
+date: 2024-01-08
 ...
 \clearpage
 

@@ -18,11 +18,11 @@ plantuml-format: svg
 
 # HTML - Formulare
 
-## HTML - Formulare Beispiele
+## Formulare Beispiele
 
 ![](./media/HTML_Form_1.png){height=80%}
 
-## HTML - Formulare Beispiele
+## Formulare Beispiele
 
 ![](./media/HTML_Form_2.png)
 
@@ -64,7 +64,7 @@ Browser->Server : GET ...?param=value&param2=value2
   - Bei `GET`: Übertragung der Daten in den Query-Parametern der **URL**
   - Verwendung von `GET` verletzt die HTTP-Semantik (Abruf von Daten)!
 
-## HTML Syntax - Formulare
+## Syntax - Formulare
 
 - `<form>`
   - Umschließt einzelne Eingabefelder
@@ -72,7 +72,7 @@ Browser->Server : GET ...?param=value&param2=value2
   - `method`-Attribut: HTTP-Methode: `GET`/`POST`
   - `enctype`-Attribut: Kodierung: `application/x-www-form-urlencoded` (Standard), `multipart/form-data` (z.B. für Datei-Upload)
 
-## HTML Syntax - Eingabefelder
+## Syntax - Eingabefelder
 
 - `<input>`-Element
   - Eingabefeld, Art und Funktion von Attributen abhängig
@@ -85,7 +85,7 @@ Browser->Server : GET ...?param=value&param2=value2
   - `autofocus`-Attribut: Fokus beim Laden der Seite
   - `autocomplete`-Attribut: Autocomplete aktivieren/deaktivieren
 
-## HTML Syntax - Eingabefelder
+## Syntax - Eingabefelder
 
 ```html
 <form method="get" action="https://google.de">

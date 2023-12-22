@@ -19,7 +19,7 @@ plantuml-format: svg
 
 # HTML - Grundlagen
 
-## HTML - Grundlagen
+## Grundlagen
 
 **H**yper**t**ext **M**arkup **L**anguage
 
@@ -28,7 +28,7 @@ plantuml-format: svg
   - Tim Berners-Lee = "Erfinder" des Web: HTTP, HTML, URL, Webbrowser
   - Weiterentwicklung durch World Wide Web Consortium (W3C)
 
-## HTML Grundstruktur
+## Grundstruktur
 
 ```html
 <!doctype html>
@@ -44,7 +44,7 @@ plantuml-format: svg
 </html>
 ```
 
-## HTML Grundstruktur
+## Grundstruktur
 
 - Dateiendung: `.html`, `.htm`
 - `<!DOCTYPE html>`: Angabe des Dokumententyps, Browser verstehen das Dokument auch ohne
@@ -71,7 +71,7 @@ plantuml-format: svg
 - Nutzbarkeit abhängig vom Tag
 
 
-## HTML Head
+## Head
 
 - Umschlossen mit `<head>`-Tag
 - Möglicher Inhalt
@@ -85,7 +85,7 @@ plantuml-format: svg
   <meta charset="utf-8" /> <title>Titel</title>
   ```
 
-## HTML Body
+## Body
 
 - Umschlossen mit `<body>`-Tag
 - Alle Elemente im Body können vom Browser dargestellt werden
@@ -97,7 +97,7 @@ plantuml-format: svg
 
 # HTML Elemente
 
-## HTML Inline + Block Elemente
+## Inline + Block Elemente
 
 - Inline Element: (`<a>, <em>, <span> ...`)
   - Anzeige in einer Zeile, kein Zeilenumbruch für folgende Elemente
@@ -115,7 +115,7 @@ plantuml-format: svg
       Absatz 2
 
 
-## HTML Elemente: Überschriften
+## Elemente: Überschriften
 
 - `<h1>...</h1>` bis `<h6></h6>` (h = headline)
 - Block-Elemente
@@ -124,14 +124,14 @@ plantuml-format: svg
 ![](./media/HTML_headings_default.png){height=55%}
 
 
-## HTML Elemente: Absätze
+## Elemente: Absätze
 
 - `<p>...</p>` (p = paragraph)
 - Block-Element + Abstand davor und danach
 
 ![](./media/HTML_paragraph_default.png){height=70%}
 
-## HTML Elemente: Hyperlinks
+## Elemente: Hyperlinks
 
 - `<a href="https://lukaspanni.de">...</a>` (a = anchor)
 - Inline-Element, Standarddarstellung: blau und unterstrichen
@@ -142,7 +142,7 @@ plantuml-format: svg
 - Inhalt des Tags als angezeigter Link
 
 
-## HTML Elemente: Zeilenumbruch + Trennlinie
+## Elemente: Zeilenumbruch + Trennlinie
 
 - `<br>` (br = break)
   - Zeilenumbruch, nachfolgende Elemente in nächster Zeile
@@ -152,7 +152,7 @@ plantuml-format: svg
 
 ![](./media/HTML_break_hr.png){height=70%}
 
-## HTML Elemente: Hervorhebungen
+## Elemente: Hervorhebungen
 
 - `<em>` (em = emphasis)
   - Einfache Hervorhebung
@@ -164,7 +164,7 @@ plantuml-format: svg
 ![](./media/HTML_emphasis.png){height=70%}
 
 
-## HTML Elemente: Fett / Kursiv
+## Elemente: Fett / Kursiv
 
 - Fett lässt sich auch über `<b>` (b = bold) erreichen
 - Kursiv über `<i>` (i = italics)
@@ -173,7 +173,7 @@ plantuml-format: svg
   - \rightarrow{} Trennung von Inhalt + Struktur und Darstellung
 
 
-## HTML Elemente: Hoch- / Tiefstellung
+## Elemente: Hoch- / Tiefstellung
 
 - `<sup>` (superscript)
   - Hochstellung 
@@ -185,7 +185,7 @@ plantuml-format: svg
 
 
 
-## HTML Elemente: Auswahl semantischer Elemente
+## Elemente: Auswahl semantischer Elemente
 
 - Bereits behandelt: `<em>` / `<strong>`
 - Weitere Elemente mit vorwiegend **semantischer Bedeutung**
@@ -194,7 +194,7 @@ plantuml-format: svg
   - `<header>`: Abschnitt mit einleitendem Inhalt
   - `<footer>`: Fußzeile, z.B. mit Angabe von Autor, Copyright etc.
 
-## HTML Elemente: Listen
+## Elemente: Listen
 
 - `<ul>`: Unsortierte Liste (ul = unordered list)
   - Standarddarstellung: Aufzählungspunkte
@@ -214,14 +214,14 @@ plantuml-format: svg
   - `style` - Inline CSS-Style
 
 
-## HTML Elemente: Tabellen
+## Elemente: Tabellen
 
 - Tabelle (`<table>`) besteht aus "Unter-Elementen"
   - `<tr>`: Zeile (tr = table row)
   - `<td>`: Zelle (tr = table data)
   - `<th>`: Kopfzeile (th = table header)
 
-## HTML Elemente: Tabellen
+## Elemente: Tabellen
 ```html
 <table>
   <tr>
@@ -238,12 +238,12 @@ plantuml-format: svg
 </table>
 
 ```
-## HTML Elemente: Tabellen
+## Elemente: Tabellen
 
 ![](./media/HTML_simple_table.png)
 
 
-## HTML Elemente: Tabellen - Border
+## Elemente: Tabellen - Border
 
 - Attribut `border` steuert die Umrandung
   - Standardwert: 0 \rightarrow{} kein Rand
@@ -251,12 +251,12 @@ plantuml-format: svg
 
 ![](./media/HTML_table_border.png){width=70%}
 
-## HTML Elemente: Tabellen - Col/Rowspan
+## Elemente: Tabellen - Col/Rowspan
 
 - Attribut `colspan` für Zusammenfassung mehrerer _Spalten_
 - Attribut `rowspan` für Zusammenfassung mehrerer _Zeilen_
 
-## HTML Elemente: Tabellen - Colspan/Rowspan 
+## Elemente: Tabellen - Colspan/Rowspan 
 
 ```html
 <table border="1">
@@ -276,11 +276,11 @@ plantuml-format: svg
 ```
 
 
-## HTML Elemente: Tabellen - Colspan/Rowspan 
+## Elemente: Tabellen - Colspan/Rowspan 
 
 ![](./media/HTML_table_span_nospan.png){height=90%}
 
-## HTML Elemente: Tabellen - Colspan/Rowspan
+## Elemente: Tabellen - Colspan/Rowspan
 
 ```html
 <table border="1">
@@ -299,11 +299,11 @@ plantuml-format: svg
 </table>
 ```
 
-## HTML Elemente: Tabellen - Colspan/Rowspan 
+## Elemente: Tabellen - Colspan/Rowspan 
 
 ![](./media/HTML_table_span_colspan.png){height=90%}
 
-## HTML Elemente: Tabellen - Colspan/Rowspan 
+## Elemente: Tabellen - Colspan/Rowspan 
 
 ```html
 <table border="1">
@@ -322,11 +322,11 @@ plantuml-format: svg
 </table>
 ```
 
-## HTML Elemente: Tabellen - Colspan/Rowspan 
+## Elemente: Tabellen - Colspan/Rowspan 
 
 ![](./media/HTML_table_span_rowspan.png){height=90%}
 
-## HTML Elemente: Bilder
+## Elemente: Bilder
 
 - `<img src="..." />`: Bild (img = image)
 - `src`-Attribut (src = source) ist eine URL zu einer Bilddatei
@@ -335,7 +335,7 @@ plantuml-format: svg
   - \rightarrow{} mehr dazu in einer weiteren Vorlesung, Stichwort: CORS
 - Attribute `width` und `heigth` zur Angabe von Breite / Höhe 
 
-## HTML Sonderzeichen
+## Sonderzeichen
 
 - Insbesondere in HTML genutzte Zeichen (`<`, `>`, ...) müssen codiert werden
 - HTML-Entitäten: `&#CODE;` oder `&NAME;`
