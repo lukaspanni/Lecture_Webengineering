@@ -35,11 +35,11 @@ Wait-Job $jobs
 
 if ($zip) {
   # Build slides as script
-  Write-Host "---
-  title: 'Vorlesung Webengineering 1'
-  date: '$(Get-Date -format "yyyy-MM-dd")'
-  ...
-  " > "Material/Slides/99_Script.md" && pandoc -f markdown+smart+yaml_metadata_block+rebase_relative_paths --toc --toc-depth 1 --pdf-engine lualatex -F pandoc-plantuml --title="Vorlesung Webengineering" -o "build/script.pdf" $(Get-ChildItem -Recurse -Path Material/Slides -Filter *.md)
+  Set-Content "Material/Slides/99_Script.md"  "---
+title: 'Vorlesung Webengineering 1'
+date: '$(Get-Date -format "yyyy-MM-dd")'
+..."
+  pandoc -f markdown+smart+yaml_metadata_block+rebase_relative_paths --toc --toc-depth 1 --pdf-engine lualatex -F pandoc-plantuml --title="Vorlesung Webengineering" -o "build/script.pdf" $(Get-ChildItem -Recurse -Path Material/Slides -Filter *.md)
 
   Set-Location .\build
   Compress-Archive -Force -Path .\* -DestinationPath ..\build.zip
