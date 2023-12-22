@@ -369,3 +369,119 @@ console.log(obj2); // Object { a: 1, b: 2, c: 3 }
 console.log(obj2.sum()); // 6
 obj2.print(); // 6
 ```
+
+# JavaScript Fortgeschritten
+
+## Destructuring
+
+- JavaScript kann Objekte und Arrays automatisch in ihre Einzelteile "zerlegen"
+```javascript
+const obj = {a: 1, b: 2, c: 3};
+const arr = [1, 2, 3];
+
+// komplett
+var {a, b, c} = obj; // a = 1, b = 2, c = 3
+var [a, b, c] = arr; // a = 1, b = 2, c = 3
+
+// teilweise
+var {a, ...rest} = obj; // a = 1, rest = {b: 2, c: 3}
+var [a, ...rest] = arr; // a = 1, rest = [2, 3]
+```
+_Hier mit `var`, um alles in ein Beispiel zu packen, schlechter Stil!_
+
+
+## Higher-Order Functions
+
+- Funktionen können in JavaScript
+  - Als Variable gespeichert werden
+  - Als Parameter übergeben werden
+  - Als Rückgabewert zurückgegeben werden
+- _Higher-Order Functions_ = Funktionen, die selbst Funktionen als Parameter annehmen oder eine Funktion zurückgeben
+
+## Higher-Order Functions - Beispiel
+
+```javascript
+const add = (a, b) => a + b;
+const sub = (a, b) => a - b;
+
+const calc = (a, b, op) => op(a, b);
+calc(1, 2, add); // 3
+calc(1, 2, sub); // -1
+``` 
+
+## `map` und `filter`
+
+- Higher-Order Functions auf Arrays \rightarrow{} erleichtern die Arbeit mit Arrays
+- `map`: erzeugt neues Array mit Ergebnis der Funktion für jedes Element des Arrays
+- `filter`: erzeugt neues Array mit allen Elementen, für die die Funktion `true` zurückgibt
+
+## `map` und `filter` - Beispiel
+
+```javascript
+const arr = [1, 2, 3, 4, 5];
+
+const squareFn = (x) => x * x;
+const isEvenFn = (x) => x % 2 == 0;
+
+const squares = arr.map(squareFn); // [1, 4, 9, 16, 25]
+const even = arr.filter(isEvenFn); // [2, 4]
+
+const squaresEven = arr.filter(isEvenFn).map(squareFn) // [4, 16]
+```
+
+## Weitere Higher-Order Functions
+
+- `forEach`: Führt Funktion für jedes Element aus
+- `some`: Gibt `true` zurück, wenn Funktion für mindestens ein Element `true` zurückgibt
+- `every`: Gibt `true` zurück, wenn Funktion für alle Elemente `true` zurückgibt
+- `find`: Gibt erstes Element zurück, für das die Funktion `true` zurückgibt
+- `reduce`: Reduziert Array auf einen Wert
+- ...
+
+\rightarrow{} Verwendung bei Bedarf nachschlagen
+
+## Promises
+
+- Asynchrone Programmierung in JavaScript
+- Asynchrone Funktionen geben ein Promise zurück
+  - Promise kann später einen Wert zurückgeben (oder nichts) oder fehlschlagen
+  - Während der Ausführung können andere Code-Teile ausgeführt werden
+- Nützlich für Operationen mit viel Wartezeit: Netzwerk, Dateisystem, ...
+
+## Promises - Beispiel
+
+```javascript
+const promise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("World!"); // resolve() = Promise erfolgreich
+  }, 1000); // 1000ms = 1s warten, bevor Code ausgeführt wird
+});
+
+promise.then((value) => {
+  // Dieser Code wird erst nach Abschluss des Promises ausgeführt
+  console.log(value);
+});
+
+// Ausführung geht direkt hier weiter!
+console.log("Hello");
+```
+
+## Promises - `async` und `await`
+
+- Syntaxerweiterung für einfachere Handhabung von Promises
+- `async` Funktionen geben automatisch ein Promise zurück
+- `await` blockiert Ausführung bis Promise fertig ist
+
+## Promises - `async` und `await` - Beispiel
+
+```javascript
+async function greeting(){
+  // setTimeout gibt kein Promise zurück! eigenes erzeugen
+  await new Promise(resolve => setTimeout(resolve, 1000));
+  return "World!";
+}
+
+const promise = greeting();
+console.log("Hello");
+console.log(await promise);
+```
