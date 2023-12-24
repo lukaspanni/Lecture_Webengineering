@@ -44,9 +44,12 @@ header-includes: |
   \pagestyle{fancy}
   \fancyfoot[R]{Licensed under CC-BY-SA-4.0}
 ..."
-  pandoc -f markdown+smart+yaml_metadata_block+rebase_relative_paths --toc --toc-depth 1 --shift-heading-level-by=-1 --pdf-engine lualatex -F pandoc-plantuml --title="Vorlesung Webengineering" -o "build/script.pdf" $(Get-ChildItem -Recurse -Path Material/Slides -Filter *.md)
-
+  pandoc -f markdown+smart+yaml_metadata_block+rebase_relative_paths --toc --toc-depth 1 --pdf-engine lualatex -F pandoc-plantuml --title="Vorlesung Webengineering" -o "build/script.pdf" $(Get-ChildItem -Recurse -Path Material/Slides -Filter *.md)
+  Remove-Item -Path "Material/Slides/99_Script.md" -Force
+  
   Set-Location .\build
   Compress-Archive -Force -Path .\* -DestinationPath ..\build.zip
   Set-Location $currentDir
 }
+
+Remove-Item -Path "tex2pdf.-*" -Force -Recurse
