@@ -183,7 +183,7 @@ siehe auch [selfhtml.org](https://wiki.selfhtml.org/wiki/CSS/Tutorials/Selektore
 ## CSS Box-Modell
 
 \centering
-![](https://upload.wikimedia.org/wikipedia/commons/7/7a/Boxmodell-detail.png)
+![](./media/Boxmodell-detail.png)
 
 ## CSS Box-Modell
 
