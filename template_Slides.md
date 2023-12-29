@@ -1,7 +1,6 @@
 ---
 title: "Vorlesung Webengineering 1 - XXXX"
 topic: "Webengineering_1_X"
-date: 2023-09-22
 author: "Lukas Panni"
 theme: "Berlin"
 colortheme: "dove"

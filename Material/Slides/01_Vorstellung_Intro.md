@@ -1,7 +1,6 @@
 ---
 title: "Vorlesung Webengineering I - Einführung"
 topic: "Webengineering_1_1"
-date: 2024-01-08
 author: "Lukas Panni"
 theme: "Berlin"
 colortheme: "dove"

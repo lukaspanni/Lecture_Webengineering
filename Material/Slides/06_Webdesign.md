@@ -1,7 +1,6 @@
 ---
 title: "Vorlesung Webengineering 1 - Webdesign"
 topic: "Webengineering_1_6"
-date: 2023-09-22
 author: "Lukas Panni"
 theme: "Berlin"
 colortheme: "dove"
@@ -35,8 +34,9 @@ plantuml-format: svg
 
 i18n = _internationalization_ (i + 18 Buchstaben + n)
 
-[W3C](https://www.w3.org/International/questions/qa-i18n.de.html)
-
+> [W3C](https://www.w3.org/International/questions/qa-i18n.de.html)
+>
+>
 > "Design und der Entwicklung eines Produkts, einer Anwendung oder eines Dokuments, das leichte Lokalisierung für Zielgruppen, die in Kultur, Region oder Sprache variieren, ermöglicht"
 
 
@@ -51,8 +51,9 @@ i18n = _internationalization_ (i + 18 Buchstaben + n)
 
 l10n = _localization_
 
-[W3C](https://www.w3.org/International/questions/qa-i18n.de.html)
-
+> [W3C](https://www.w3.org/International/questions/qa-i18n.de.html)
+> 
+>
 > "Angleichung eines Produkts, einer Anwendung oder eines Dokuments, um der Sprache, den kulturellen oder anderen Anforderungen eines bestimmten Zielmarktes (ein lokaler "Schauplatz") zu entsprechen."
 
 
@@ -72,8 +73,9 @@ Und natürlich Übersetzung!
 
 ## User Experience (UX)
 
-ISO 9241-210
-
+> **ISO 9241-210**
+>
+> 
 > "Wahrnehmungen und Reaktionen einer Person, die aus der tatsächlichen und/oder der erwarteten Benutzung eines Produkts, eines Systems oder einer Dienstleistung resultieren."
 
 
@@ -82,8 +84,9 @@ ISO 9241-210
 
 ## Usability
 
-ISO 9241-210
-
+> **ISO 9241-210**
+> 
+> 
 > "Ausmaß, in dem ein System, ein Produkt oder eine Dienstleistung durch bestimmte Benut- zer in einem bestimmten Nutzungskontext genutzt werden kann, um festgelegte Ziele **effektiv**, **effizient** und **zufriedenstellend** zu erreichen."
 
 

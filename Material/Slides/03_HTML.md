@@ -1,7 +1,6 @@
 ---
 title: "Vorlesung Webengineering I - HTML"
 topic: "Webengineering_1_2"
-date: 2024-01-15
 author: "Lukas Panni"
 theme: "Berlin"
 colortheme: "dove"
