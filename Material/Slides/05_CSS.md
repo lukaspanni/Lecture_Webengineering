@@ -11,8 +11,6 @@ linkstyle: boldslanted
 aspectratio: 169
 lang: de-DE
 section-titles: true
-toc: true
-numbersections: true
 plantuml-format: svg
 ...
 
@@ -182,8 +180,7 @@ siehe auch [selfhtml.org](https://wiki.selfhtml.org/wiki/CSS/Tutorials/Selektore
 
 ## CSS Box-Modell
 
-\centering
-![](./media/Boxmodell-detail.png)
+![Box-Modell](./media/Boxmodell-detail.png)
 
 ## CSS Box-Modell
 
@@ -242,8 +239,7 @@ siehe auch [selfhtml.org](https://wiki.selfhtml.org/wiki/CSS/Tutorials/Selektore
 
 ## Positionierung - Flexbox Grundbegriffe
 
-\centering
-![](https://css-tricks.com/wp-content/uploads/2018/11/00-basic-terminology.svg)
+![Flexbox Grundlagen](https://css-tricks.com/wp-content/uploads/2018/11/00-basic-terminology.svg)
 
 
 ## Positionierung - Flexbox Containr
@@ -261,8 +257,7 @@ siehe auch [selfhtml.org](https://wiki.selfhtml.org/wiki/CSS/Tutorials/Selektore
 
 ## Positionierung - Flexbox Container `justify-content`
 
-\centering
-![](https://css-tricks.com/wp-content/uploads/2018/10/justify-content.svg){height=90%}
+![CSS-Tricks: A Complete Guide to Flexbox](https://css-tricks.com/wp-content/uploads/2018/10/justify-content.svg){height=90%}
 
 
 ## Positionierung - Flexbox Container
@@ -272,8 +267,7 @@ siehe auch [selfhtml.org](https://wiki.selfhtml.org/wiki/CSS/Tutorials/Selektore
 
 ## Positionierung - Flexbox Container `align-items`
 
-\centering
-![](https://css-tricks.com/wp-content/uploads/2018/10/align-items.svg){height=85%}
+![CSS-Tricks: A Complete Guide to Flexbox](https://css-tricks.com/wp-content/uploads/2018/10/align-items.svg){height=85%}
 
 
 ## Positionierung - Flexbox Items

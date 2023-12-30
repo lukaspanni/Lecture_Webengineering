@@ -23,7 +23,7 @@ foreach ($arg in $files) {
       pandoc -f markdown+smart+yaml_metadata_block+rebase_relative_paths --toc --slide-level 2 --number-section --pdf-engine lualatex -t beamer -H preamble.tex -F pandoc-plantuml -o $pdfName $arg
     }
     else {
-      pandoc -f markdown+smart+yaml_metadata_block+rebase_relative_paths --toc --toc-depth 1 --pdf-engine lualatex -F pandoc-plantuml -o $pdfName $arg
+      pandoc -f markdown+smart+yaml_metadata_block+rebase_relative_paths --toc --toc-depth 1 --number-section --pdf-engine lualatex -F pandoc-plantuml -o $pdfName $arg
     }
   } -ArgumentList $arg, $pdfName
 }
@@ -38,8 +38,13 @@ if ($zip) {
   Set-Content "Material/Slides/99_Script.md"  "---
 title: 'Vorlesung Webengineering 1'
 date: '$(Get-Date -format "yyyy-MM-dd")'
+author: 'Lukas Panni'
+header-includes: |
+  \usepackage{fancyhdr}
+  \pagestyle{fancy}
+  \fancyfoot[R]{Licensed under CC-BY-SA-4.0}
 ..."
-  pandoc -f markdown+smart+yaml_metadata_block+rebase_relative_paths --toc --toc-depth 1 --pdf-engine lualatex -F pandoc-plantuml --title="Vorlesung Webengineering" -o "build/script.pdf" $(Get-ChildItem -Recurse -Path Material/Slides -Filter *.md)
+  pandoc -f markdown+smart+yaml_metadata_block+rebase_relative_paths --toc --toc-depth 1 --shift-heading-level-by=-1 --pdf-engine lualatex -F pandoc-plantuml --title="Vorlesung Webengineering" -o "build/script.pdf" $(Get-ChildItem -Recurse -Path Material/Slides -Filter *.md)
 
   Set-Location .\build
   Compress-Archive -Force -Path .\* -DestinationPath ..\build.zip

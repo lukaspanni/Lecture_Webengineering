@@ -12,8 +12,6 @@ linkstyle: boldslanted
 aspectratio: 169
 lang: de-DE
 section-titles: true
-toc: true
-numbersections: true
 plantuml-format: svg
 ...
 
@@ -105,13 +103,10 @@ plantuml-format: svg
     - `<em>Text 1</em><span>Text 2</span>`
     - \rightarrow{} _Text 1Text 2_
 - Block Element: (`<p>, <div>, <section>, ...`)
-
   - Anzeige als "Block", jedes Element eine neue Zeile
   - Beispiel:
-
     - `<p>Absatz 1</p><p>Absatz 2</p>`
     - \rightarrow{} Absatz 1
-
       Absatz 2
 
 
