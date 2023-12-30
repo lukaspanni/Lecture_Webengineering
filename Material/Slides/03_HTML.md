@@ -123,7 +123,7 @@ plantuml-format: svg
 - `<p>...</p>` (p = paragraph)
 - Block-Element + Abstand davor und danach
 
-![](./media/HTML_paragraph_default.png){height=70%}
+![](./media/HTML_paragraph_default.png){height=68%}
 
 ## Elemente: Hyperlinks
 

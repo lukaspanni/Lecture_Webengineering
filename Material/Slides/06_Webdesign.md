@@ -143,20 +143,20 @@ Attentive Wahrnehmung:
 
 Objekte, die nah beieinander liegen, werden als zusammengehörig wahrgenommen (auch das Gegenteil ist der Fall)
 
-![](./media/Gestaltgesetze_naehe.png){height=75%}
+![](./media/Gestaltgesetze_naehe.png){height=70%}
 
 
 ## Gesetz der Gleichheit
 
 Gleichheit von Form oder Farbe führt zu Wahrnehmung als zusammengehörig
 
-![](./media/Gestaltgesetze_gleichheit.png){height=75%}
+![](./media/Gestaltgesetze_gleichheit.png){height=70%}
 
 
 ## Gestaltgesetze: weitere Beispiele
 
-[achtung-designer.com](https://achtung-designer.com/gestaltgesetze-die-designs-besser-machen/)
-[cmyktastic.ch](https://www.cmyktastic.ch/gestalterische-gesetze/)
+- [achtung-designer.com](https://achtung-designer.com/gestaltgesetze-die-designs-besser-machen/)
+- [cmyktastic.ch](https://www.cmyktastic.ch/gestalterische-gesetze/)
 
 
 ## Wahrnehmung von Bewegung
@@ -263,6 +263,10 @@ Empfehlungen:
   - Konsistenz!
   - Kontrast von Text und Hintergrund beachten
 
+## Farbgestaltung Beispiel
+
+![Farbgestaltung](./media/website_colorful.png){height=75%}
+
 
 ## Typografie
 
@@ -279,6 +283,10 @@ Empfehlungen:
   - Wirkung von Schriftarten beachten
 
   
+## Typografie Beispiel
+
+![Typografie](./media/typography.png){height=75%}
+
 ## Responsive Design
 
 - Anpassung an verschiedene Bildschirmgrößen
@@ -293,6 +301,9 @@ Empfehlungen:
     - Elemente brauchen mehr Platz
     - Andere Interaktionen möglich
 
+## Responsive Design Beispiel
+
+![Responsive Websites](./media/Example_Webapplications.png){width=70%}
 
 ## Keine Angst vor Weißraum
 
@@ -303,7 +314,7 @@ Empfehlungen:
   - Hilft bei User-Führung
   - Trägt zu Ästhetik bei
 
-## Beispiel Apple Webseite 2023
+## Beispiel Apple Webseite
 
 \centering
 ![](./media/Screenshot_apple_2023.png)
