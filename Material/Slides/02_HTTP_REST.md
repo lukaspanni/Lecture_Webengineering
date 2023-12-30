@@ -12,8 +12,6 @@ linkstyle: boldslanted
 aspectratio: 169
 lang: de-DE
 section-titles: true
-toc: true
-numbersections: true
 plantuml-format: svg
 ...
 
@@ -52,9 +50,9 @@ plantuml-format: svg
 
 ## HTTP-Versionen - HTTP/3 vs. HTTP/2
 
-![](media/HTTP3.png){height=65%}
+![HTTP3](media/HTTP3.png){height=65%}
 
-_https://de.wikipedia.org/wiki/Hypertext_Transfer_Protocol#/media/Datei:HTTP-2_vs._HTTP-3_Protocol_Stack.svg_
+[_CC-BY-SA-4.0_](https://de.wikipedia.org/wiki/Hypertext_Transfer_Protocol#/media/Datei:HTTP-2_vs._HTTP-3_Protocol_Stack.svg)
 
 # HTTP Request - Response
 
@@ -94,18 +92,14 @@ Date: Fri, 17 Nov 2023 12:26:59 GMT
 
 ## Verbreitung der HTTP-Versionen
 
-![](https://blog.cloudflare.com/content/images/2023/06/download-3.png){height=80%}
-
-_https://blog.cloudflare.com/content/images/2023/06/download-3.png_
+![_https://blog.cloudflare.com/content/images/2023/06/download-3.png_](https://blog.cloudflare.com/content/images/2023/06/download-3.png){height=70%}
 
 ## HTTP Header
 
 - Jede weitere Zeile im Request: `<Key>: <Value><CR><LF>`
-
 - `Host: lukaspanni.de` \rightarrow{} Pflicht-Header ab HTTP/1.1
   - Erlaubt virtuelle Hosts: mehrere Webseiten auf einem physischen Server (und einer IP)
 - `Accept: */*` \rightarrow{} Format der Antwort egal
-
 - Viele weitere Standard Request-Header:
   - User-Agent
   - Accept-Encoding
@@ -194,7 +188,7 @@ Aufgeteilt in 5 Gruppen:
 
 ## HTTP Status Codes
 
-![](media/HTTP_Status_Codes.png){height=70%}
+![Status Codes](media/HTTP_Status_Codes.png){height=70%}
 
 ## Wichtige HTTP Status Codes
 

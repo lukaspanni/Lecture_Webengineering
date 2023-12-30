@@ -1,6 +1,8 @@
 ---
 title: Bewertung Projektarbeit
 date: 2024-01-08
+lang: de-DE
+author: "Lukas Panni"
 ...
 \clearpage
 

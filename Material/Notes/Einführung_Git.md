@@ -1,5 +1,7 @@
 ---
 title: Einführung in Git 
+lang: de-DE
+author: "Lukas Panni"
 ...
 
 #  Einführung in Git
