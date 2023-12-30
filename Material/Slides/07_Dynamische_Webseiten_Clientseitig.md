@@ -11,8 +11,6 @@ linkstyle: boldslanted
 aspectratio: 169
 lang: de-DE
 section-titles: true
-toc: true
-numbersections: true
 plantuml-format: svg
 ...
 
@@ -63,11 +61,11 @@ plantuml-format: svg
 - Rot: _text nodes_
 - Grün: _comment nodes_
 
+Beispiel von [SelfHTML Wiki](https://wiki.selfhtml.org/wiki/Datei:DOM-1.svg), CC-BY-SA-3.0
 
 ## DOM - Beispiel
 
-\centering
-![](https://wiki.selfhtml.org/images/0/01/DOM-1.svg){height=90%}
+![DOM Visualisierung](https://wiki.selfhtml.org/images/0/01/DOM-1.svg){height=90%}
 
 ## DOM Zugriff
 

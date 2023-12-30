@@ -11,8 +11,6 @@ linkstyle: boldslanted
 aspectratio: 169
 lang: de-DE
 section-titles: true
-toc: true
-numbersections: true
 plantuml-format: svg
 ...
 
