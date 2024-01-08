@@ -32,7 +32,7 @@ plantuml-format: svg
 - 1996: **HTTP/1.0**
 - 1999: **HTTP/1.1**
   - Verschiedene Verbesserungen, z.B. Pipelining zur Reduktion von TCP-Verbindungen
-  - Einführung von optionalem "Host"-[[HTTP-Header|Header]]
+  - Einführung von optionalem "Host"-Header
     - → ermöglicht Nutzung von einem physischen Server für mehrere Webseiten
 - 2015: **HTTP/2**
   - **Ziel**: Performanceverbesserungen und Optimierungen
@@ -133,13 +133,12 @@ Verschiedene Methoden zum Ausdruck der _Semantik_
 | **DELETE**  | Resource löschen                  |
 | **OPTIONS** | Liste erlaubter Methoden anfragen |
 
-
 ## HTTP Request-Body
 
 - z.B. für _POST_ und _PUT_ weitere Informationen benötigt
-- Übertragung im optionalen **Body** 
+- Übertragung im optionalen **Body**
 - Beginnt nach einer Leerzeile
-- Darf beliebigen _Text_ enthalten 
+- Darf beliebigen _Text_ enthalten
 
 ## HTTP Request - Response
 
@@ -168,11 +167,10 @@ Date: Fri, 17 Nov 2023 12:26:59 GMT
 
 - Wie Request einzelne Textzeilen, jeweils mit `<CR><LF>` getrennt
 - Erste Zeile "Status-Line": `<Version> <Status-Code><Status-Message>`
-  - Version: `HTTP/1.1` 
+  - Version: `HTTP/1.1`
   - Status-Code: 200
   - Status-Message: OK
 - Danach folgt der Response-Body, Aufbau wie Request-Body
-
 
 ## HTTP Status Codes (Antwort)
 
@@ -233,13 +231,10 @@ Server->Client : 200 OK, ContentType: application/json
 
 - Beide Varianten haben Vor- und Nachteile
 
-|               | **Nachteile**             | **Vorteile**                                                                              |
-| ------------- | ------------------------- | ----------------------------------------------------------------------------------------- |
-| Server-driven | gute Unterstzützung       | Server kann nicht optimal entscheiden                                                     |
-| Agent-driven  | kein einheitliches Format | - Client kann die optimale Entscheidung treffen \newline - zusätzlicher Request notwendig |
-
-
-
+|               | **Nachteile**                         | **Vorteile**                                                                              |
+| ------------- | ------------------------------------- | ----------------------------------------------------------------------------------------- |
+| Server-driven | Server kann nicht optimal entscheiden | gute Unterstzützung                                                                       |
+| Agent-driven  | - kein einheitliches Format   \newline - zusätzlicher Request notwendig           | Client kann die optimale Entscheidung treffen |
 
 # REST
 
@@ -249,6 +244,7 @@ Server->Client : 200 OK, ContentType: application/json
 
 - Architekturstil des Webs
 - Geht auf Dissertation (2002) von Roy Fielding zurück:
+
   - "Architectural Styles and the Design of Network-based Software Architectures"
   - [Kapitel 5](https://ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm): REST
 
@@ -260,25 +256,30 @@ Server->Client : 200 OK, ContentType: application/json
 
 ## REST Prinzipien
 
-### Resources with unique Identifiers 
+### Resources with unique Identifiers
+
 Ressourcen und ihre Identifikation
 
 ### Links & Hypermedia
+
 Beziehungen zwischen Ressourcen
 
 ### Uniform Interfaces
+
 Einheitliche Schnittstellen für generische Clients
 
 ### Multiple Representations
+
 Mehrere Repräsentationen / Formate
 
 ### Stateless Interactions
-Zustandslosigkeit der _Interaktion_
 
+Zustandslosigkeit der _Interaktion_
 
 ## REST - Ressources with unique Identifiers
 
 - Jede Webanwendung stellt verschiedene Ressourcen bereit
+
   - z.B. Produkte, Songs, User, ...
   - aber auch abstraktere Dinge: Prozesse, Anfragen, ...
 
@@ -296,7 +297,7 @@ Zustandslosigkeit der _Interaktion_
 ## REST - Uniform Interfaces
 
 - Wichtig für Skalierbarkeit
-- Ein einheitlicher Client kann alle Ressourcen nutzen 
+- Ein einheitlicher Client kann alle Ressourcen nutzen
 - \rightarrow{} **HTTP**
   - Klare Semantik der Methoden
   - Klare Semantik der Status-Codes
@@ -308,7 +309,7 @@ Zustandslosigkeit der _Interaktion_
   - Menschenlesbare und maschinenlesbare Repräsentationen der gleichen Ressource
   - Verschiedene Sprachen
 
-## REST - Stateless Interactions 
+## REST - Stateless Interactions
 
 - Nicht zu verwechseln mit **zustandslosen Anwendungen**!
   - Nur die _Interaktion_ (Request-Response) ist zustandslos
@@ -317,20 +318,18 @@ Zustandslosigkeit der _Interaktion_
   - Auf dem Server
   - Im Client
 
-
 ## REST - Realisierung Zustand
 
-### Zustand im Client 
+### Zustand im Client
 
 - Client für Verwaltung des Zustands verantwortlich
-- Kein Aufwand für Server 
+- Kein Aufwand für Server
 - Keine volle Kontrolle über Client \rightarrow{} kann Zustand manipulieren
 
 ### Zustand im Server (in der Applikation)
 
 - Server muss Zustand einem Client zuordnen können
 - Wenn die Applikation ausfällt ist auch der Zustand verloren \rightarrow{} Verteilung auf mehrere Server schwer
-
 
 ## REST - Realisierung Zustand
 
@@ -340,7 +339,6 @@ Zustandslosigkeit der _Interaktion_
 - Ressourcen können über mehrere Server verteilt werden \rightarrow{} horizontale Skalierung
 - Ausfall der Applikation / des Servers leichter kompensierbar
 
-
 ## REST - Skalierbarkeit
 
 ![](./media/Load_Balancing_1.png){height=90%}
@@ -348,4 +346,3 @@ Zustandslosigkeit der _Interaktion_
 ## REST - Skalierbarkeit
 
 ![](./media/Load_Balancing_2.png){height=90%}
-
