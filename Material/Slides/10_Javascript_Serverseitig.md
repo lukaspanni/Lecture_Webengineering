@@ -153,7 +153,7 @@ Test-File Line 2
 Ende Promise
 ```
 
-## Node.js HTTP-Server (1)
+## Node.js HTTP-Server
 
 ```javascript
 import createServer from "http";
@@ -163,11 +163,24 @@ createServer((request, response) => {
     "Content-Type": "text/html",
   });
   response.write(
-    "<!DOCTYPE html>\n<html>\n<head>\n<title>Test</title>\n</head>\n<body>\n<h1>Test</h1>\n</body>\n</html>\n"
+    "<!DOCTYPE html>\n<html>\n<head>\n<title>Test</title>\
+    \n</head>\n<body>\n<h1>Test</h1>\n</body>\n</html>\n"
   );
   response.end();
 }).listen(80);
 ```
+
+## Praxisaufgabe
+
+Schreibt einen einfachen HTTP-Server, der HTML, CSS und JavaScript-Dateien ausliefern kann.
+Der Server soll auf Port 80 laufen und bei einem Aufruf der URL `http://localhost/` oder `http://localhost/index.html` die Datei `index.html` ausliefern.
+Bei einem Aufruf der URL `http://localhost/style.css` soll die Datei `style.css` ausgeliefert werden.
+Analog auch für `/script.js`.
+Bei allen anderen Anfragen soll ein Fehler ausgegeben werden.
+
+Achtet auf die richtigen Content-Types und Status-Codes!
+
+Argumente von `createServer`: `request`: [http.IncomingMessage](https://nodejs.org/api/http.html#class-httpincomingmessage), `response`: [http.ServerResponse](https://nodejs.org/api/http.html#class-httpserverresponse)
 
 # Modules und Pakckages
 
