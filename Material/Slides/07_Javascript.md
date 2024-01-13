@@ -128,6 +128,20 @@ console.log(a / b); // 0.5
     - Ansonsten wird bei unterschiedlichen Typen immer in `number` konvertiert
  - Logische Operatoren: `&&`, `||`, `!`
 
+## Grundlegende Synax - Strings (1)
+
+- Deklaration mit `'` oder `"`
+- Konkatenation (Zusammenfügen) mit `+`
+- Eigenschaften / Funktionen:
+  - `length`: Länge des Strings
+  - `charAt(index)`: Zeichen an Position `index`
+  - `indexOf(string)`: Position von `string` im String
+  - `substring(start, end)`: Teilstring von `start` bis `end` (exklusive)
+  - `split(separator)`: Zerlegen an `separator`, ergibt Array
+- Interpolation mit Backticks: `` `Hallo ${name}` ``
+  - Alles zwischen `${` und `}` wird als JavaScript-Code interpretiert und Ergebnis in String eingefügt
+
+
 ## Grundlegende Syntax - Schleifen
 
 - `for`-Schleife: `for (let i = 0; i < 10; i++) { ... }`

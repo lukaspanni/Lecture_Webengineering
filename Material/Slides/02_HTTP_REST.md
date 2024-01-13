@@ -200,7 +200,7 @@ Aufgeteilt in 5 Gruppen:
 - Feature das eine _automatische_ Einigung auf ein Ausgabeformt ermöglicht
 - Ermöglicht verschiedene _Repräsentationen_ für die gleiche _Ressource_
 - Weitere Header für Sprache (`Accept-Language`) und Kodierung `Accept-Encoding`
-- Format der Antwort über `ContentType`, `Language`, `Encoding` Header angegeben
+- Format der Antwort über `Content-Type`, `Content-Language`, `Content-Encoding` Header angegeben
 
 - Server-driven (Server entscheidet):
   - Client sendet gewünschtes Format im `Accept`-Header
@@ -211,7 +211,7 @@ Aufgeteilt in 5 Gruppen:
 
 ```{.plantuml height=50%}
 Client->Server : GET /; Accept: application/json, text/xml
-Server->Client : 200 OK, ContentType: application/json
+Server->Client : 200 OK, Content-Type: application/json
 ```
 
 ## HTTP Content Negotiation
@@ -224,7 +224,7 @@ Server->Client : 200 OK, ContentType: application/json
 Client->Server : GET /; Accept: application/json, text/xml
 Server->Client : 300 Multiple Choices; ...
 Client->Server : GET /r1; Accept: application/json
-Server->Client : 200 OK, ContentType: application/json
+Server->Client : 200 OK, Content-Type: application/json
 ```
 
 ## HTTP Content Negotiation
