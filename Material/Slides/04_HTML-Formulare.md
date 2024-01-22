@@ -210,7 +210,8 @@ Verwendung des Button-Attributs ist außerdem semantisch korrekter.
 ```html
 <form method="post" action="">
   <label for="test">Test</label>
-  <input id="test" />
+  <input id="test" name="test"/>
+  <input type="submit" />
 </form>
 ```
 
@@ -227,8 +228,8 @@ Verwendung des Button-Attributs ist außerdem semantisch korrekter.
 <form method="post" action="" >
   <fieldset>
     <legend>Kontaktdaten</legend>
-    <input placeholder="Vorname"/>
-    <input placeholder="Nachname"/>
+    <input name="vorname" placeholder="Vorname"/>
+    <input name="nachname" placeholder="Nachname"/>
   </fieldset>
 </form>
 ```
