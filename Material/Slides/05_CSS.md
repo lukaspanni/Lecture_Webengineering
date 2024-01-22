@@ -30,18 +30,18 @@ plantuml-format: svg
 
 ## Syntax
 
-- Deklaration: Paar aus Eigenschaft (Property) und Wert (Value)
+- **Deklaration**: Paar aus Eigenschaft (Property) und Wert (Value)
   - `color: red;`
   - `font-size: 12px;`
-- Deklarationsblock: Sammlung von zusammengehörigen Deklarationen
+- **Deklarationsblock**: Sammlung von zusammengehörigen Deklarationen
   ```css
   {
     color: red;
     font-size: 12px;
   }
   ```
-- Selektor: Element, auf das sich eine Deklaration / ein Deklarationsblock bezieht
-- Kombination aus Selektor und Deklarationsblock: _Ruleset_
+- **Selektor**: Element, auf das sich eine Deklaration / ein Deklarationsblock bezieht
+- Kombination aus Selektor und Deklarationsblock: **_Ruleset_**
 
 ## Selektoren
 
