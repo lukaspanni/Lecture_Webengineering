@@ -139,7 +139,7 @@ printMessage(result);
 
 ## TypeScript Features - Type Annotations (3)
 
-## Typfehler
+### Typfehler
 
 ![Typfehler durch Verstoß gegen Annotation](./media/typescript_type_error_annotation.png)
 
@@ -168,4 +168,117 @@ printMessage(result);
 Beispiel [`typescript-classes.ts`](https://github.com/TINF23B5-Webengineering/Lecture_Code/blob/main/11_Javascript_Serverseitig_2/typescript-example/typescript-classes.ts)
 
 
-<!-- TODO: weitere TypeScript-Features, Alternative Runtimes -->
+## TypeScript Features - Komplexere Typangaben (1)
+
+- Definition von neuen Typen (Typalias) für komplexere Typen
+  - `type <name> = <typ>`
+
+- Kombination mehrerer Typen zu neuem komplexeren Typ
+  - Union: `type1 | type2` \rightarrow{} Sowohl `type1` als auch `type2` erlaubt
+  - String-Unions: `"text1" | "text2"` \rightarrow{} erlaubt nur bestimmte Strings als Werte
+  - Intersection: `type1 & type2` \rightarrow{} Typ muss sowohl `type1` als auch `type2` erfüllen
+    - z.B. `type1 = {a: string}` und `type2 = {b: number}` \rightarrow{} `type1 & type2 => {a: string, b: number}` 
+  
+## TypeScript Features - Komplexere Typangaben (2)
+
+**Mapped Types**: dynamischer Typ aus bestehenden Typen,  häufiges Beispiel: Readonly-Typ (Achtung: nur Typprüfung, keine echte Immutability!)
+
+```typescript
+type Readonly<T> = {
+    // für alle Properties P in Typ T:
+    //  eine readonly Property mit gleichem Typ
+    readonly [P in keyof T]: T[P]; 
+}
+type ReadonlyPerson = Readonly<Person>;
+```
+
+## TypeScript Features - Komplexere Typangaben (3)
+
+**Type Guards**: Typprüfung zur Laufzeit
+
+```typescript
+export function isPerson(obj: any): obj is Person {
+  return obj.name !== undefined && obj.age !== undefined;
+}
+```
+
+- `isPerson(object) === true` \rightarrow{} danach kann `obj` wie vom Typ `Person` verwendet werden
+
+
+## TypeScript Features - Komplexere Typangaben (4)
+
+[**Utility Types**](https://www.typescriptlang.org/docs/handbook/utility-types.html): vordefinierte, häufige Typtransformationen
+
+- `Partial<T>`: Properties von `T` optional
+- `Required<T>`: Properties von `T` erforderlich
+- `Readonly<T>`: Wie oben schon gezeigt
+- `Pick<T, K>`: Ausgewählte Properties von `T` (mit Namen in `K`)
+- ...
+
+## TypeScript Ressourcen
+
+- [TypeScript-Handbuch](https://www.typescriptlang.org/docs/handbook/intro.html)
+- [TypeScript Playground](https://www.typescriptlang.org/play): Online-Editor zum Ausprobieren von TypeScript
+- [TypeScript-Tutorial (Text)](https://learn.microsoft.com/en-us/training/paths/build-javascript-applications-typescript/)
+- [TypeScript-Tutorial (Video)](https://www.youtube.com/watch?v=_CaGUZNEobk)
+- [Typdefinitionen für JavaScript-Bibliotheken](https://github.com/DefinitelyTyped/DefinitelyTyped)
+
+# Alternative Runtimes für JavaScript/TypeScript
+
+## Deno (1)
+
+[deno.land](https://deno.land)
+
+- Runtime für JavaScript und TypeScript
+- Basiert wie Node.js auf V8-Engine
+- idR. Performanter als Node.js
+- Standardfunktionalität bereits eingebaut (z.B. HTTP-Server)
+- Direkte Unterstützung von TypeScript, mitgelieferte Lint und Test-Tools
+- Kein Package Manager (Module über URLs eingebunden)
+  - Nutzung von NPM-Paketen meist problemlos möglich
+
+## Deno (2)
+
+- [Installation](https://docs.deno.com/runtime/manual#install-deno): `curl -fsSL https://deno.land/x/install/install.sh | sh` / `irm https://deno.land/install.ps1 | iex`
+- Einfacher Webserver:
+
+```typescript
+Deno.serve((_request: Request) => {
+  return new Response("Hello, world!");
+});
+```
+Ausführen: `deno run --allow-net server.ts`
+
+
+## Bun (1)
+
+[bun.sh](https://bun.sh/)
+
+- Runtime + Bundler + Package Manager + Test-Runner für JavaScript und TypeScript
+- Basiert auf `JavaScriptCore` Engine aus Apple WebKit
+- idR. Performanter als Node.js und Deno
+- Standardfunktionalität bereits eingebaut (z.B. HTTP-Server)
+- Nutzung von NPM-Paketen mit eigenem NPM-Client
+
+## Bun (2)
+
+- [Installation](https://bun.sh/docs/installation): `npm install -g @bun/cli` oder `curl -fsSL https://bun.sh/install | bash`
+  - Aktuell nur experimentelle Windows-Unterstützung (außer über WSL)
+- Einfacher Webserver:
+    
+```typescript
+const server = Bun.serve({
+  port: 8000,
+  fetch(request) {
+    return new Response("Welcome to Bun!");
+  },
+});
+```
+
+## Fazit Alternative Runtimes
+
+- Alle Runtimes entwickeln sich ständig weiter
+- Node-Ökosystem ist am größten: Pakete, Tools, Anleitungen, Stackoverflow-Beiträge, ...
+- Aktuell großer Hype um Bun
+
+\rightarrow{} Gerne alles ausprobieren und eigene Meinung bilden!
