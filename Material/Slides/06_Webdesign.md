@@ -127,7 +127,7 @@ Attentive Wahrnehmung:
 
 ## Präattentive Wahrnehmung Beispiel
 
-![](./media/pre_attentive_processing.png){height=90%}
+![Präattentive Wahrnehmung](./media/pre_attentive_processing.png){height=75%}
 
 
 ## Gestaltgesetze
@@ -143,14 +143,15 @@ Attentive Wahrnehmung:
 
 Objekte, die nah beieinander liegen, werden als zusammengehörig wahrgenommen (auch das Gegenteil ist der Fall)
 
-![](./media/Gestaltgesetze_naehe.png){height=70%}
+Beispiel: [Amazon Einstellungen](https://www.amazon.de/gp/css/homepage.html?ref_=nav_AccountFlyout_ya)
+![Gesetz der Nähe](./media/Gestaltgesetze_naehe.png){height=60%}
 
 
 ## Gesetz der Gleichheit
 
 Gleichheit von Form oder Farbe führt zu Wahrnehmung als zusammengehörig
 
-![](./media/Gestaltgesetze_gleichheit.png){height=70%}
+![Gesetz der Gleichheit](./media/Gestaltgesetze_gleichheit.png){height=60%}
 
 
 ## Gestaltgesetze: weitere Beispiele
@@ -176,7 +177,7 @@ Einsatz:
 
 # Gestaltung
 
-## Gestaltung von Bedienelementen
+## Gestaltung von Bedienelementen (1)
 
 Affordances:
 
@@ -190,7 +191,7 @@ Affordances:
   - Falsche Affordances: Legen eine falsche Nutzung nahe
 
 
-## Gestaltung von Bedienelementen
+## Gestaltung von Bedienelementen (2)
 
 Constraints:
 
@@ -199,6 +200,8 @@ Constraints:
   - Button deaktivieren, wenn Bedingungen nicht erfüllt sind
   - Cursor verschwindet, wenn nicht geklickt werden darf
   - Form von Steckverbindungen
+
+Affordances & Constrains betreffen auch für physische Produkte (siehe [Video](https://youtu.be/yY96hTb8WgI)) 
 
 
 ## Feedback
@@ -214,13 +217,13 @@ Constraints:
 
 ## Entwurfsprinzip: Strukturierung der Benutzerschnittstelle
 
-![](./media/Screenshot_vscode.png){height=75%}
+![Strukturierung UI VS Code](./media/Screenshot_vscode.png){height=75%}
 
 ## Entwurfsprinzip: Kombination visueller und textueller Elemente
 
 - Hilft bei Verständnis, Redundanz ist hier meist nicht negativ!
 
-![](./media/Screenshot_word.png){height=75%}
+![Kombination visuell + textuell Microsoft Word](./media/Screenshot_word.png){height=75%}
 
 
 ## Entwurfsprinzip: Sichtbarkeit von Systemzuständen und möglichen Aktionen
@@ -265,7 +268,7 @@ Empfehlungen:
 
 ## Farbgestaltung Beispiel
 
-![Farbgestaltung](./media/website_colorful.png){height=75%}
+![Farbgestaltung](./media/website_colorful.png){height=72%}
 
 
 ## Typografie
@@ -316,22 +319,41 @@ Empfehlungen:
 
 ## Beispiel Apple Webseite
 
-\centering
-![](./media/Screenshot_apple_2023.png)
+![Apple Website](./media/Screenshot_apple_2023.png){height=75%}
 
+## Beispielhafter Designprozess
+
+1. **Ideenfindung und Recherche**: Anforderungen, Zielgruppe, Konkurrenzanalyse, ...
+2. **Skizzen und Wireframes**: grundlegende Struktur und Funktionalität, "User Flow", keine Details
+3. **Designentwürfe**: _iterativ_ Designentwürfe erstellen, Feedback einholen 
+4. **Prototypen**: _iterativ_ interaktive Prototypen entwickeln (z.B. Figma, tatsächlicher Code), Feedback einholen
+5. **Umsetzung**: Design in tatsächliche Webseite umsetzen
+6. **Testen**: Nutzerfeedback einholen, ggf. Anpassungen vornehmen
+
+...
 
 ## Abschließende Empfehlungen
 
 - Konsistenz ist sehr wichtig
 - Weniger ist oft mehr, keine Angst vor Weißraum
 - Probiert verschiedene Designs aus
-  - Ein gutes Design entwickelt sich iterativ
+  - Ein gutes Design entwickelt sich iterativ!
+  - Beginnt mit einfachen Skizzen, Wireframes und Prototypen
   - Nutzerfeedback ist wichtig
 
 - Es gibt nie das perfekte Design!
 
 
-## Ressourcen
+## Design Tools
+
+- [Figma](https://www.figma.com/)
+- [Canva](https://www.canva.com/)
+- [Sketch](https://www.sketch.com/)
+- [Balsamiq](https://balsamiq.com/)
+- Stift und Papier
+
+
+## Weiterführende Ressourcen
 
 - [5 Academic Research Papers Every Designer Should Read](https://uxdesign.cc/5-academic-research-papers-every-designer-should-read-f24b170db295)
 - [Design Principles](https://principles.design/)
