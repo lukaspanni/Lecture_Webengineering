@@ -295,47 +295,6 @@ Auch nicht frei von Problemen:
 - **Alternative**: Frameworks für hybride Apps (Mix aus nativer App und Webanwendung)
   - Capacitor, Cordova, React Native, ...
 
-## Content Delivery Networks (CDNs)
-
-- Weltweite Auslieferung von Medien (Bilder, Videos, ...) ist komplex
-  - Nutzer erwarten schnelle Ladezeiten und hohe Verfügbarkeit
-  - Wechselnde Nutzerzahlen
-  - Nutzer sind weltweit verteilt \rightarrow{} verschieden lange Übertragungswege
-
-\rightarrow{} Mit **CDNs** muss keiner diese Probleme selbst lösen!
-
-- Weltweit verteilte Server, die Inhalte cachen
-- Anfragen an nächstgelegenen CDN-Server
-  - Antwort aus dem Cache oder Weiterleitung an den Ursprungsserver und Caching der Antwort
-  - Je größer die Nutzerzahl, desto wahrscheinlicher ist gewünschter Inhalt im Cache!
-
-##
-
-![CDN Struktur](https://cf-assets.www.cloudflare.com/slt3lc6tev37/7Dy6rquZDDKSJoeS27Y6xc/4a671b7cc7894a475a94f0140981f5d9/what_is_a_cdn_distributed_server_map.png){height=85%}
-
-## CDN - Vorteile
-
-- Kürzere Übertragungswege
-  - Schnellere Ladezeiten
-  - Geringerer Bandbreitenverbrauch am Ursprung \rightarrow{} Kosten
-- Hohe Verfügbarkeit und Skalierbarkeit durch Redundanz
-- Geringere Last auf Ursprungsserver
-- Security-Features: DDoS-Schutz, TLS, ...
-
-## CDN - Nachteile
-
-- Ungeeignet für dynamische Inhalte
-  - Cache bringt nur Vorteile, wenn häufig gleiche Inhalte ausgeliefert werden
-- Aufwand für Konfiguration und Wartung
-  - Aber: keine eigene geographische Verteilung notwendig
-
-## CDN Anbieter
-
-- Cloudflare
-- Akamai
-- Jetpack (für WordPress-Websites)
-- Cloud-Provider (AWS CloudFront, Azure CDN, Google Cloud/Media CDN, ...)
-
 # Deployment
 
 ## Klassisches Deployment
@@ -427,3 +386,80 @@ Mehrere Anwendungen (Webserver-Instanzen) auf einem physischen Server?
   - Komponenten einer Anwendung häufig als eigene Container
   - Interaktion muss konfiguriert werden
   - \rightarrow{} Orchestrierung z.B. mit _Kubernetes_, _Docker Compose_
+
+
+
+## Content Delivery Networks (CDNs)
+
+- Weltweite Auslieferung von Medien (Bilder, Videos, ...) ist komplex
+  - Nutzer erwarten schnelle Ladezeiten und hohe Verfügbarkeit
+  - Wechselnde Nutzerzahlen
+  - Nutzer sind weltweit verteilt \rightarrow{} verschieden lange Übertragungswege
+
+\rightarrow{} Mit **CDNs** muss keiner diese Probleme selbst lösen!
+
+- Weltweit verteilte Server, die Inhalte cachen
+- Anfragen an nächstgelegenen CDN-Server
+  - Antwort aus dem Cache oder Weiterleitung an den Ursprungsserver und Caching der Antwort
+  - Je größer die Nutzerzahl, desto wahrscheinlicher ist gewünschter Inhalt im Cache!
+
+##
+
+![CDN Struktur](https://cf-assets.www.cloudflare.com/slt3lc6tev37/7Dy6rquZDDKSJoeS27Y6xc/4a671b7cc7894a475a94f0140981f5d9/what_is_a_cdn_distributed_server_map.png){height=85%}
+
+## CDN - Vorteile
+
+- Kürzere Übertragungswege
+  - Schnellere Ladezeiten
+  - Geringerer Bandbreitenverbrauch am Ursprung \rightarrow{} Kosten
+- Hohe Verfügbarkeit und Skalierbarkeit durch Redundanz
+- Geringere Last auf Ursprungsserver
+- Security-Features: DDoS-Schutz, TLS, ...
+
+## CDN - Nachteile
+
+- Ungeeignet für dynamische Inhalte
+  - Cache bringt nur Vorteile, wenn häufig gleiche Inhalte ausgeliefert werden
+- Aufwand für Konfiguration und Wartung
+  - Aber: keine eigene geographische Verteilung notwendig
+
+## CDN Anbieter
+
+- Cloudflare
+- Akamai
+- Jetpack (für WordPress-Websites)
+- Cloud-Provider (AWS CloudFront, Azure CDN, Google Cloud/Media CDN, ...)
+
+
+## Deployment in der Cloud 
+
+- Deployment in der Cloud sehr einfach
+  - Keine eigene/gemietete Hardware
+  - Einfache Verwaltung und Konfiguration
+  - Skalierbarkeit und Verfügbarkeit durch Cloud-Provider
+  - CDN Funktionen integriert / einfach nutzbar
+  - Security-Features
+\rightarrow{} Heute de facto Standard für viele Anwendungen
+
+## Deployment in der Cloud - Beispiel Azure Static Web Apps (1)
+
+### Azure Static Web Apps
+0
+- Speziell für statische Webanwendungen
+  - Standard: HTML, CSS, JS
+  - Single Page Applications
+  - + einfache Backends über Azure Functions (Serverless Computing = meist einfache Funktionen, bei Anfrage ausgeführt)
+- Kostenloser Plan reicht für vieles bereits aus
+- Einfaches Deployment über GitHub-Actions oder Azure Pipelines
+
+## Deployment in der Cloud - Beispiel Azure Static Web Apps (2)
+
+### Ablauf
+
+- Azure Account anlegen und konfigurieren
+- Installation [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurestaticwebapps)
+- Anlegen neuer Static Web App über Extension, Dialog führt durch Konfiguration
+- GitHub-Actions Workflow automatisch erstellt
+- Push in GitHub-Repository startet Deployment \rightarrow{} Rest geht automatisch
+
+\rightarrow{} Mit vorhandenem Azure Account und fertiger Webanwendung in < 10 Minuten eingerichtet!
