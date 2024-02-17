@@ -16,7 +16,7 @@ plantuml-format: svg
 
 # Einführung ASP.NET Core
 
-## Grundlagen 
+## Grundlagen
 
 - Webframework für .NET > 5.0
   - Webentwicklung mit C# \rightarrow{} Vor- und Nachteile gegenüber JavaScript
@@ -31,7 +31,6 @@ plantuml-format: svg
 - Visual Studio Code oder Visual Studio
   - VS Code: [C#-Erweiterung](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)
   - VS: ASP.NET und Webentwicklung Workload (im Installer auswählen)
-
 
 ## API-Entwicklung mit ASP.NET Core
 
@@ -54,7 +53,7 @@ plantuml-format: svg
 
 - `dotnet new webapi --use-controllers -o <NAME>`
   - Oder über die Oberfläche von Visual Studio
-- Standard-Vorlage: 
+- Standard-Vorlage:
   - `WeatherForecastController` + `WeatherForecast` Model
   - `GET`-Methode mit zufälligen Daten
   - Automatische Generation von Swagger/OpenAPI-Dokumentation
@@ -71,7 +70,6 @@ plantuml-format: svg
 ## Swagger UI
 
 ![Swagger UI](./media/swagger-ui-example.png)
-
 
 ## Grundstruktur
 
@@ -113,8 +111,8 @@ public class WeatherForecast
     public string? Summary { get; set; }
 }
 ```
-\rightarrow{} Triviale Datenklasse
 
+\rightarrow{} Triviale Datenklasse
 
 ## API erweitern: eigene Model-Klasse
 
@@ -123,6 +121,7 @@ public class WeatherForecast
 ```C#
 public record class User(long Id, string Username, string Email);
 ```
+
 - Nutzt C# `record` für einfache Datenklassen \rightarrow{} für viele Use-Cases vollkommen ausreichend
   - Automatische Properties (getter/setter)
   - Automatische `Equals` Implementierung
@@ -134,6 +133,7 @@ public record class User(long Id, string Username, string Email);
     - z.B. `InMemory` für lokale Tests, `SqlServer` für Produktivumgebung
   - Alternative Datenbank Provider für andere Datenbanken
 - Erstellen von Datenbank-Kontext (hier sehr einfach)
+
 ```C#
 public class UserContext(DbContextOptions<UserContext> options) : DbContext(options)
 {
@@ -149,11 +149,11 @@ public class UserContext(DbContextOptions<UserContext> options) : DbContext(opti
   - Automatisches Übergeben an Controller-Klassen
 
 Einfügen vor `builder.Build()`:
+
 ```C#
 builder.Services.AddDbContext<UserContext>(options =>
     options.UseInMemoryDatabase("Users"));
 ```
-
 
 ## API erweitern: Controller Klasse (1)
 
@@ -164,12 +164,12 @@ builder.Services.AddDbContext<UserContext>(options =>
 
 ![Controller generieren](./media/controller-generation.png){height=65%}
 
-
 ## API erweitern: Controller Klasse (3)
 
 Ohne Visual Studio: CLI-Tool `dotnet aspnet-codegenerator` nutzen
 
 Installation (mit Abhängigkeiten):
+
 ```bash
 dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
 dotnet add package Microsoft.EntityFrameworkCore.Design
@@ -181,6 +181,7 @@ dotnet tool install -g dotnet-aspnet-codegenerator
 ## API erweitern: Controller Klasse (4)
 
 Code-Generierung:
+
 ```bash
 dotnet aspnet-codegenerator controller -name <ControllerName> -async
  -api -m <ModelClass> -dc <ContextClass> -outDir Controllers
@@ -228,3 +229,54 @@ Erstellt eine einfache Controller-basierte API zur Verwaltung von Nachrichtenart
 Jeder Artikel hat einen Autor (Name reicht), einen Titel, ein Veröffentlichungsdatum, einen Text (HTML) und eine Liste von Tags (Komma-separierte Liste reicht aus).
 Die In-Memory Datenbank kann hier genutzt werden, aber Achtung: beim Neustart der Anwendung müssen die Artikel wieder hinzugefügt werden (POST-Request).
 
+# Minimal APIs - Schnelldurchlauf
+
+## Projekt erstellen und Grundstruktur
+
+`dotnet new webapi -o <NAME>` (oder über Visual Studio UI)
+
+- Erzeugt Konfigurationen und `Program.cs`
+
+```C#
+var builder = WebApplication.CreateBuilder(args);
+var app = builder.Build();
+app.MapGet("/", () => "Hello World!");
+app.Run();
+```
+
+Ausführen mit `dotnet run` oder über die UI der IDE
+
+## Minimal APIs - Routing
+
+- Zuordnung von Handlern zu Routen ähnlich wie bei express
+  - `app.MapGet("/route", <Handler-Function>);`
+  - Analog für `MapPost`, `MapPut`, `MapDelete`, ...
+- Handler-Funktionen meist als Lambda direkt in der Zuordnung
+- Routenparameter und Rückgabewerte wie bei Controller-basierten APIs
+
+## Minimal APIs - Datenbankverbindung
+
+Analog zu Controller-basierten APIs
+
+- NuGet-Paket für Datenbankverbindung hinzufügen & Verbindung konfigurieren
+- Model-Klasse & Datenbankkontext erstellen
+- Dependency Injection konfigurieren: `builder.Services.AddDbContext<...>(...);`
+- Datenbankkontext in Handler-Funktionen nutzen: `MapGet("/", (Context context) => ...)`
+
+## Minimal APIs - Beispiel
+
+```C#
+
+app.MapGet("/api/users/{id}", async (UserContext context, long id) =>
+    await context.Users.FindAsync(id) is User user
+        ? Results.Ok(user)
+        : Results.NotFound());
+
+app.MapPost("/api/users", async (UserContext context, User user) =>
+{
+    context.Users.Add(user);
+    await context.SaveChangesAsync();
+    return Results.Created($"/api/users/{user.Id}", user);
+});
+...
+```
