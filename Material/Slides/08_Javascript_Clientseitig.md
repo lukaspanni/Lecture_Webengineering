@@ -210,7 +210,7 @@ article.innerHTML = "<h1>Neuer Titel</h1>";
 const element = document.createElement("h1");
 element.textContent = "Neuer Titel";
 article = document.getElementByTagName("article")[0];
-article.insertBefor(element, article.childNodes[0]);
+article.insertBefore(element, article.childNodes[0]);
 ```
 
 ## DOM Manipulation Attribute
@@ -258,16 +258,15 @@ function handler(event) {
 ## Event-Handler setzen
 
 - Event-Handler können auch direkt im HTML-Code gesetzt werden
-  - `onclick`, `onchange`, `onkeyup`, ...
+  - Attribute `onclick`, `onchange`, `onkeyup`, ...
   - `this` ist das auslösende Element
-  - `event` ist das Event-Objekt
 
 - Solche Vermischung von HTML und JavaScript ist aber nicht empfehlenswert!
 
 
 ## Praxisaufgabe 1
 
-Erweitert die Nachrichtenseite um ein Formular zum schreiben neuer Artikel (mit Titel, Bild und Text). Beim Absenden des Formulars soll ein neuer Artikel auf der Seite eingefügt werden und das Formular geleert werden.
+Erweitert die Nachrichtenseite um ein Formular zum Schreiben neuer Artikel (mit Titel, Bild und Text). Beim Absenden des Formulars soll ein neuer Artikel auf der Seite eingefügt werden und das Formular geleert werden.
 
 
 # `fetch` API
@@ -294,7 +293,8 @@ Erweitert die Nachrichtenseite um ein Formular zum schreiben neuer Artikel (mit 
 const websiteResponse = await fetch("https://lukaspanni.de/")
 console.log(await websiteResponse.text()); // -> HTML-Code 
 
-const apiResponse = await fetch("https://api.github.com/users/lukaspanni")
+const apiResponse = await fetch("https://api.github.com
+				/users/lukaspanni")
 const data = await apiResponse.json(); // -> Objekt
 console.log(data.location); // -> "Karlsruhe, Germany"
 ```
@@ -327,7 +327,8 @@ console.log(data.location); // -> "Karlsruhe, Germany"
 const response = await fetch("https://httpbin.org/post", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ name: "Lukas Panni", location: "Karlsruhe" })
+    body: 
+	JSON.stringify({ name: "Lukas Panni", location: "Karlsruhe" })
 });
 
 console.log(await response.json()); 
