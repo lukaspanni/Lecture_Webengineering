@@ -60,7 +60,7 @@ Browser->Server : GET ...?param=value&param2=value2
 - Meist wird `POST` verwendet
   - Übertragung der Daten im **Body**
   - Bei `GET`: Übertragung der Daten in den Query-Parametern der **URL**
-  - Verwendung von `GET` verletzt die HTTP-Semantik (Abruf von Daten)!
+  - Verwendung von `GET` verletzt die HTTP-Semantik (Abruf von Daten) in vielen Fällen! Ausnahme z.B. Suchformulare
 
 ## Syntax - Formulare
 

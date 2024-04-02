@@ -67,7 +67,7 @@ Accept: */*
 
 ```
 
-Response:
+**Response**:
 
 ```
 HTTP/1.1 200 OK
@@ -83,7 +83,7 @@ Date: Fri, 17 Nov 2023 12:26:59 GMT
 
 - Request besteht aus einzelnen Textzeilen (Header), jeweils mit `<CR><LF>` (Zeilenumbruch) getrennt
 
-  - Headeesendet nach Leerzeile (= `<CR><LF><CR><LF>`)
+  - Header endet nach Leerzeile (= `<CR><LF><CR><LF>`)
 
 - Erste Zeile "Request-Line": `<Methode> <Resource> <Protokoll><CR><LF>`
   - Methode: `GET`
@@ -231,10 +231,10 @@ Server->Client : 200 OK, Content-Type: application/json
 
 - Beide Varianten haben Vor- und Nachteile
 
-|               | **Nachteile**                         | **Vorteile**                                                                              |
-| ------------- | ------------------------------------- | ----------------------------------------------------------------------------------------- |
-| Server-driven | Server kann nicht optimal entscheiden | gute Unterstzützung                                                                       |
-| Agent-driven  | - kein einheitliches Format   \newline - zusätzlicher Request notwendig           | Client kann die optimale Entscheidung treffen |
+|               | **Nachteile**                                                         | **Vorteile**                                  |
+| ------------- | --------------------------------------------------------------------- | --------------------------------------------- |
+| Server-driven | Server kann nicht optimal entscheiden                                 | gute Unterstzützung                           |
+| Agent-driven  | - kein einheitliches Format \newline - zusätzlicher Request notwendig | Client kann die optimale Entscheidung treffen |
 
 # REST
 
